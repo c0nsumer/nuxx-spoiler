@@ -1,0 +1,41 @@
+{
+	"name": "nuxx-spoiler",
+	"version": "1.0.0",
+	"description": "Spoilers for WordPress: blur images and obscure text behind a click-to-reveal content warning.",
+	"author": "Steve @ nuxx.net",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress",
+		"wordpress-plugin",
+		"gutenberg",
+		"spoiler",
+		"content-warning",
+		"nsfw"
+	],
+	"homepage": "https://nuxx.net/",
+	"main": "build/spoiler-block/index.js",
+	"files": [
+		"nuxx-spoiler.php",
+		"build",
+		"readme.txt",
+		"LICENSE"
+	],
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"env": "wp-env"
+	},
+	"engines": {
+		"node": ">=20.10.0"
+	},
+	"devDependencies": {
+		"@wordpress/env": "^10.0.0",
+		"@wordpress/icons": "^15.2.0",
+		"@wordpress/scripts": "^30.0.0",
+		"typescript": "^5.5.4"
+	}
+}

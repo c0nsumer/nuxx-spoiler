@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "nuxx/spoiler",
+	"version": "1.0.0",
+	"title": "Spoiler",
+	"category": "design",
+	"description": "Hide images or text behind a blurred, click-to-reveal content warning.",
+	"keywords": [ "spoiler", "nsfw", "content warning", "hide", "blur", "sensitive", "censor" ],
+	"textdomain": "nuxx-spoiler",
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": true,
+		"anchor": true
+	},
+	"example": {
+		"attributes": {
+			"label": "Spoiler"
+		},
+		"innerBlocks": [
+			{
+				"name": "core/paragraph",
+				"attributes": {
+					"content": "The butler did it."
+				}
+			}
+		]
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,161 @@
+/**
+ * Front-end styles for the Spoiler block and inline spoiler format.
+ * Loaded on the front end and in the editor (editor.scss overrides the
+ * hiding so authors can see what they're writing).
+ */
+
+.wp-spoiler {
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px;
+
+	&__content {
+		// scale() hides the transparent edge bleed the blur creates.
+		filter: blur(24px);
+		transform: scale(1.03);
+		pointer-events: none;
+		user-select: none;
+		-webkit-user-select: none;
+		transition: filter 0.25s ease, transform 0.25s ease;
+	}
+
+	&__overlay {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5em;
+		width: 100%;
+		margin: 0;
+		padding: 1em;
+		background: rgba(0, 0, 0, 0.25);
+		border: 0;
+		border-radius: 0;
+		appearance: none;
+		-webkit-appearance: none;
+		cursor: pointer;
+
+		&:focus-visible {
+			outline: 2px solid #fff;
+			outline-offset: -4px;
+		}
+
+	}
+
+	&__pill {
+		display: inline-block;
+		padding: 0.45em 1.3em;
+		border-radius: 999px;
+		background: rgba(15, 15, 15, 0.85);
+		color: #fff;
+		font-size: 0.85em;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		line-height: 1.4;
+	}
+
+	&__overlay:hover .wp-spoiler__pill,
+	&__overlay:focus-visible .wp-spoiler__pill {
+		background: rgba(0, 0, 0, 0.95);
+	}
+
+	&__hint {
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 0.75em;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+	}
+
+	// Created by view.js after the first reveal.
+	&__rehide {
+		position: absolute;
+		top: 0.5em;
+		right: 0.5em;
+		z-index: 2;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		width: 2em;
+		height: 2em;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		border-radius: 50%;
+		background: rgba(15, 15, 15, 0.6);
+		color: #fff;
+		appearance: none;
+		-webkit-appearance: none;
+		cursor: pointer;
+
+		svg {
+			width: 1.25em;
+			height: 1.25em;
+			fill: currentcolor;
+		}
+
+		&:hover,
+		&:focus-visible {
+			background: rgba(15, 15, 15, 0.9);
+		}
+	}
+
+	&.is-revealed {
+
+		.wp-spoiler__content {
+			filter: none;
+			transform: none;
+			pointer-events: auto;
+			user-select: text;
+			-webkit-user-select: text;
+		}
+
+		.wp-spoiler__overlay {
+			display: none;
+		}
+
+		.wp-spoiler__rehide {
+			display: inline-flex;
+		}
+	}
+}
+
+// Inline spoiler: a solid bar over the text. Themes can override the
+// bar color via --nuxx-spoiler-bar.
+.wp-spoiler-inline {
+	background: var(--nuxx-spoiler-bar, #202225);
+	border-radius: 0.25em;
+	padding: 0 0.2em;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+
+	&:not(.is-revealed) {
+
+		&,
+		* {
+			color: transparent !important;
+			text-shadow: none !important;
+		}
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--nuxx-spoiler-bar, #202225);
+		outline-offset: 2px;
+	}
+
+	&.is-revealed {
+		background: rgba(140, 140, 140, 0.2);
+		user-select: text;
+		-webkit-user-select: text;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.wp-spoiler__content {
+		transition: none;
+	}
+}

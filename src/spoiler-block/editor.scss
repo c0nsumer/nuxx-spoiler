@@ -1,0 +1,62 @@
+/**
+ * Editor-only styles. style.scss also loads in the editor, so the main job
+ * here is undoing the front-end hiding while authoring, plus the dashed
+ * outline + label chip that mark the spoiler region.
+ */
+
+.wp-spoiler.is-spoiler-editor {
+	border: 1.5px dashed rgba(120, 120, 120, 0.6);
+	overflow: visible;
+
+	// Keep content readable while authoring.
+	&:not(.is-preview-hidden) > .wp-spoiler__content {
+		filter: none;
+		transform: none;
+		pointer-events: auto;
+		user-select: text;
+		-webkit-user-select: text;
+	}
+
+	&::before {
+		content: attr(data-spoiler-label);
+		position: absolute;
+		top: -0.85em;
+		left: 12px;
+		z-index: 2;
+		padding: 0.15em 0.9em;
+		border-radius: 999px;
+		background: #1e1e1e;
+		color: #fff;
+		font-family: -apple-system, system-ui, sans-serif;
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		line-height: 1.6;
+	}
+
+	// The preview overlay is informational only; clicks fall through.
+	> .wp-spoiler__overlay {
+		pointer-events: none;
+	}
+
+	&.is-preview-hidden {
+		overflow: hidden;
+	}
+}
+
+// The inline format must stay readable while authoring; front-end CSS makes
+// it transparent. `html` ancestor wins the specificity tie.
+html .editor-styles-wrapper .wp-spoiler-inline {
+	background: rgba(140, 140, 140, 0.25);
+	outline: 1px dashed rgba(120, 120, 120, 0.8);
+	border-radius: 0.25em;
+	cursor: text;
+	user-select: text;
+	-webkit-user-select: text;
+
+	&,
+	* {
+		color: inherit !important;
+	}
+}
