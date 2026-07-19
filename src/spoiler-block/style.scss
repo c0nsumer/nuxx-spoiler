@@ -30,6 +30,19 @@
 		}
 	}
 
+	// Core caps aligned figures at max-width: 50% of their container so
+	// floated images leave room for wrapped text. Inside the
+	// shrink-wrapped spoiler that percentage resolves against the
+	// already-hugged box and halves the image, so lift the cap here.
+	// (Aligned figures are wrapped in div.wp-block-image on the front
+	// end; the direct-child form covers unwrapped/classic markup.)
+	& &__content > .alignleft,
+	& &__content > .alignright,
+	& &__content > .wp-block-image > .alignleft,
+	& &__content > .wp-block-image > .alignright {
+		max-width: 100%;
+	}
+
 	// While hidden, the content itself stays unstyled (the overlay's
 	// backdrop-filter does the blurring) so revealing restores the exact
 	// original rendering — no scaling, clipping, or rounded corners.
