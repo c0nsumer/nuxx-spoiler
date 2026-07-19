@@ -7,6 +7,21 @@
 .wp-spoiler {
 	position: relative;
 
+	// Hug the content: contain inner margins (flow-root) and trim the
+	// outermost ones so the wrapper's edges — which the overlay and the
+	// re-hide button anchor to — coincide with the visible content.
+	&__content {
+		display: flow-root;
+
+		> :first-child {
+			margin-top: 0;
+		}
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	// While hidden, the content itself stays unstyled (the overlay's
 	// backdrop-filter does the blurring) so revealing restores the exact
 	// original rendering — no scaling, clipping, or rounded corners.

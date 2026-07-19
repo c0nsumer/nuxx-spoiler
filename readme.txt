@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,11 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
+
+= 1.1.0 =
+* Blur is now applied by the overlay (backdrop-filter), so hidden content is never scaled, clipped, or rounded and reveals exactly as authored.
+* The wrapper now hugs its content, keeping the re-hide button evenly inset in the corner regardless of theme margins.
+* Revealing fades the overlay out instead of removing it abruptly (disabled under reduced-motion preferences).
 
 = 1.0.0 =
 * Initial release: Spoiler block, inline spoiler format, label presets, keyboard shortcut, transforms.
