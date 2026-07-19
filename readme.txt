@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.5.2
+Stable tag: 1.6.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,9 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
+
+= 1.6.0 =
+* The spoiler wrapper now always spans the content area, like core's Group block. This replaces the shrink-wrap sizing from 1.4.1/1.5.2, which resolved percentage-based layouts (aligned figures, galleries, columns) against the wrong width on some themes. Content inside a spoiler now renders identically to the same content unwrapped, on any theme.
 
 = 1.5.2 =
 * Fixed left/right-aligned images rendering at half size inside a spoiler: core caps aligned figures at 50% of their container, which wrongly halved them against the spoiler's shrink-wrapped width.
