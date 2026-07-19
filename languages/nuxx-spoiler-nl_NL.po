@@ -30,7 +30,7 @@ msgstr "Vervaagt afbeeldingen en verbergt tekst achter een inhoudswaarschuwing d
 
 #. Author of the plugin
 #: nuxx-spoiler.php
-msgid "Steve @ nuxx.net"
+msgid "Steve Vigneau"
 msgstr ""
 
 #. translators: %s: warning label, e.g. "NSFW".

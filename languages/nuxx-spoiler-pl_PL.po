@@ -30,7 +30,7 @@ msgstr "Rozmywa obrazy i ukrywa tekst za ostrzeżeniem o treści odsłanianym kl
 
 #. Author of the plugin
 #: nuxx-spoiler.php
-msgid "Steve @ nuxx.net"
+msgid "Steve Vigneau"
 msgstr ""
 
 #. translators: %s: warning label, e.g. "NSFW".
