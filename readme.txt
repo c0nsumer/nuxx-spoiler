@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.7.0
+Stable tag: 1.8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,9 +19,9 @@ Two mechanisms:
 * **Spoiler block** — wraps any blocks (images, galleries, paragraphs, embeds) and blurs them under an overlay with a warning pill. Label presets (Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity) plus free text.
 * **Inline spoiler format** — obscures a word or phrase mid-sentence with a solid bar.
 
-Editor integration: block inserter entry, "Turn into Spoiler" transform for existing blocks, inline-format toolbar button, and a keyboard shortcut (Shift+Alt+S / Ctrl+Option+S) that wraps selected blocks or toggles the inline format on selected text.
+Editor integration: block inserter entry, "Turn into Spoiler" transform for existing blocks (Ungroup transforms back), and an inline-format toolbar button.
 
-Accessibility: the overlay is a real button; hidden content is inert and aria-hidden until revealed so screen readers, tab order, and find-in-page cannot reach it. Without JavaScript, content stays hidden (fails closed).
+Accessibility: the overlay is a real button, and the block's hidden content is inert and aria-hidden until revealed so screen readers, tab order, and find-in-page cannot reach it. The block fails closed without JavaScript — its markup ships in the hidden state. The inline format's bar is drawn with CSS that always loads; without JavaScript it stays visually obscured but remains readable to screen readers and find-in-page, since its ARIA state is applied at runtime.
 
 Note: this is courtesy hiding, not security. Content is present in the page HTML and appears un-hidden in RSS feeds.
 
@@ -40,6 +40,13 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
+
+= 1.8.0 =
+* Front-end style and script now always load, so inline spoilers in synced patterns, template parts, and widgets are reliably hidden. (Previously a content scan could miss them, leaving hidden text visible.)
+* Removed the keyboard shortcut: its editor-wide key handling could misfire while typing in text fields or wrap a block when an inline toggle was intended. Use the toolbar button and Ungroup instead.
+* The block's HTML anchor (Advanced panel) is now output on the front end, so fragment links to a spoiler work.
+* Hardened render.php against direct file access.
+* Documentation now accurately scopes the no-JavaScript guarantee: the block fails closed; the inline format stays visually obscured but is not hidden from assistive technology until JavaScript runs.
 
 = 1.7.0 =
 * Three new label presets: Graphic content, Flashing lights, Nudity (translated for all bundled locales).

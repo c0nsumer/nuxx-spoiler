@@ -12,12 +12,11 @@ Spoilers for WordPress: blur images and obscure text behind a click-to-reveal co
 - **Warning label presets** — Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity — plus a free-text field, per block.
 - **First-class editor integration**:
   - Block inserter entry (search "spoiler", "nsfw", "hide", "blur"…)
-  - "Turn into Spoiler" — select any block(s) and transform them into a Spoiler; Ungroup (in the block's options menu) or the keyboard shortcut transforms back
+  - "Turn into Spoiler" — select any block(s) and transform them into a Spoiler; Ungroup (in the block's options menu) transforms back
   - Toolbar button for the inline format (under the ¶ formatting menu)
-  - Keyboard shortcut `Shift+Alt+S` (Windows/Linux) / `Ctrl+Option+S` (Mac): with text selected, toggles the inline spoiler; with block(s) selected, wraps them in a Spoiler block (or unwraps a selected Spoiler)
   - "Preview hidden state" toolbar toggle so you can see what visitors will see
-- **Accessibility-minded** — the overlay is a real button; hidden content is `inert` and `aria-hidden` until revealed, so screen readers, tab order, and find-in-page can't leak it. Reveal/re-hide manage focus. `prefers-reduced-motion` is respected.
-- **Fails closed without JavaScript** — markup ships in the hidden state; no JS means content stays hidden.
+- **Accessibility-minded** — the overlay is a real button; the block's hidden content is `inert` and `aria-hidden` until revealed, so screen readers, tab order, and find-in-page can't leak it. Reveal/re-hide manage focus. `prefers-reduced-motion` is respected.
+- **The block fails closed without JavaScript** — its markup ships in the hidden state, so no JS means the content stays hidden. The inline format's bar is CSS-drawn and always loads, but without JavaScript the hidden text remains readable to screen readers and find-in-page (the ARIA state is applied at runtime).
 
 ## Caveats
 

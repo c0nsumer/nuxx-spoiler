@@ -9,10 +9,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
-import {
-	RichTextShortcut,
-	RichTextToolbarButton,
-} from '@wordpress/block-editor';
+import { RichTextToolbarButton } from '@wordpress/block-editor';
 import { unseen } from '@wordpress/icons';
 
 const FORMAT_NAME = 'nuxx/spoiler-inline';
@@ -24,17 +21,12 @@ function Edit( { isActive, value, onChange, onFocus } ) {
 	};
 
 	return (
-		<>
-			<RichTextShortcut type="access" character="s" onUse={ onToggle } />
-			<RichTextToolbarButton
-				icon={ unseen }
-				title={ __( 'Spoiler', 'nuxx-spoiler' ) }
-				onClick={ onToggle }
-				isActive={ isActive }
-				shortcutType="access"
-				shortcutCharacter="s"
-			/>
-		</>
+		<RichTextToolbarButton
+			icon={ unseen }
+			title={ __( 'Spoiler', 'nuxx-spoiler' ) }
+			onClick={ onToggle }
+			isActive={ isActive }
+		/>
 	);
 }
 

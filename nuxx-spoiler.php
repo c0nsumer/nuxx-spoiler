@@ -3,7 +3,7 @@
  * Plugin Name:       Spoiler
  * Plugin URI:        https://github.com/c0nsumer/nuxx-spoiler
  * Description:       Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.
- * Version:           1.7.0
+ * Version:           1.8.0
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Steve Vigneau
@@ -49,43 +49,25 @@ function nuxx_spoiler_init() {
 add_action( 'init', 'nuxx_spoiler_init' );
 
 /**
- * The block's style/view script only load when the block is present. The
- * inline spoiler text format can appear in posts that contain no Spoiler
- * block, so enqueue the same assets when any queried post uses it.
+ * The block's assets load automatically where the block appears, but the
+ * inline spoiler format can occur in any rendered content (posts, synced
+ * patterns, template parts, widgets) and its hiding is CSS-based — if the
+ * stylesheet is missing, hidden text displays in the clear. Always load
+ * the small front-end style and view script so the format fails closed.
  */
-function nuxx_spoiler_maybe_enqueue_inline_assets() {
-	if ( is_admin() ) {
+function nuxx_spoiler_enqueue_front_end_assets() {
+	$block_type = WP_Block_Type_Registry::get_instance()->get_registered( 'nuxx/spoiler' );
+
+	if ( ! $block_type ) {
 		return;
 	}
 
-	$posts = isset( $GLOBALS['wp_query']->posts ) ? $GLOBALS['wp_query']->posts : array();
+	foreach ( (array) $block_type->view_script_handles as $handle ) {
+		wp_enqueue_script( $handle );
+	}
 
-	foreach ( (array) $posts as $queried_post ) {
-		if ( empty( $queried_post->post_content ) ) {
-			continue;
-		}
-
-		// Matches both the current class (nuxx-spoiler-inline) and the
-		// legacy one (wp-spoiler-inline) stored by pre-1.4 versions.
-		if ( false === strpos( $queried_post->post_content, 'spoiler-inline' ) ) {
-			continue;
-		}
-
-		$block_type = WP_Block_Type_Registry::get_instance()->get_registered( 'nuxx/spoiler' );
-
-		if ( ! $block_type ) {
-			return;
-		}
-
-		foreach ( (array) $block_type->view_script_handles as $handle ) {
-			wp_enqueue_script( $handle );
-		}
-
-		foreach ( (array) $block_type->style_handles as $handle ) {
-			wp_enqueue_style( $handle );
-		}
-
-		return;
+	foreach ( (array) $block_type->style_handles as $handle ) {
+		wp_enqueue_style( $handle );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'nuxx_spoiler_maybe_enqueue_inline_assets' );
+add_action( 'wp_enqueue_scripts', 'nuxx_spoiler_enqueue_front_end_assets' );

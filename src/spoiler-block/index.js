@@ -10,7 +10,6 @@ import { unseen } from '@wordpress/icons';
 import Edit from './edit';
 import save from './save';
 import metadata from './block.json';
-import './keyboard-shortcut';
 import '../inline-format';
 import './style.scss';
 import './editor.scss';

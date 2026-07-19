@@ -12,7 +12,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: nuxx-spoiler.php
-#: build/spoiler-block/render.php:18
+#: build/spoiler-block/render.php:20
 #: build/spoiler-block/index.js:1
 msgid "Spoiler"
 msgstr "Spoiler"
@@ -38,12 +38,12 @@ msgid "https://nuxx.net/"
 msgstr ""
 
 #. translators: %s: warning label, e.g. "NSFW".
-#: build/spoiler-block/render.php:28
+#: build/spoiler-block/render.php:37
 #, php-format
 msgid "Show hidden content: %s"
 msgstr "Mostrar contenido oculto: %s"
 
-#: build/spoiler-block/render.php:31
+#: build/spoiler-block/render.php:40
 #: build/spoiler-block/index.js:1
 msgid "Click to show"
 msgstr "Haz clic para mostrar"
@@ -71,10 +71,6 @@ msgstr "Luces intermitentes"
 #: build/spoiler-block/index.js:1
 msgid "Nudity"
 msgstr "Desnudos"
-
-#: build/spoiler-block/index.js:1
-msgid "Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block)."
-msgstr "Envuelve los bloques seleccionados en un bloque de spoiler (o desenvuelve un bloque de spoiler seleccionado)."
 
 #: build/spoiler-block/index.js:1
 msgid "Show content"

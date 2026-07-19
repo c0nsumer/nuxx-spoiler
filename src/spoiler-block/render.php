@@ -13,11 +13,20 @@
  * @package NuxxSpoiler
  */
 
+defined( 'ABSPATH' ) || exit;
+
 $nuxx_spoiler_label = ! empty( $attributes['label'] )
 	? $attributes['label']
 	: __( 'Spoiler', 'nuxx-spoiler' );
+
+// Dynamic blocks must output the anchor themselves; WordPress only
+// serializes it into static save markup.
+$nuxx_spoiler_wrapper = array( 'class' => 'nuxx-spoiler' );
+if ( ! empty( $attributes['anchor'] ) ) {
+	$nuxx_spoiler_wrapper['id'] = $attributes['anchor'];
+}
 ?>
-<div <?php echo get_block_wrapper_attributes( array( 'class' => 'nuxx-spoiler' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<div <?php echo get_block_wrapper_attributes( $nuxx_spoiler_wrapper ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<div class="nuxx-spoiler__content" inert aria-hidden="true">
 		<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- inner blocks markup. ?>
 	</div>
