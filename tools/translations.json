@@ -24,7 +24,11 @@
 		"hide": "verbergen",
 		"blur": "unscharf",
 		"sensitive": "sensibel",
-		"censor": "zensieren"
+		"censor": "zensieren",
+		"Graphic content": "Drastische Inhalte",
+		"Flashing lights": "Blinkende Lichter",
+		"Nudity": "Nacktheit",
+		"Hidden text — click to show": "Verborgener Text – zum Anzeigen klicken"
 	},
 	"es_ES": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -51,7 +55,11 @@
 		"hide": "ocultar",
 		"blur": "difuminar",
 		"sensitive": "sensible",
-		"censor": "censurar"
+		"censor": "censurar",
+		"Graphic content": "Contenido gráfico",
+		"Flashing lights": "Luces intermitentes",
+		"Nudity": "Desnudos",
+		"Hidden text — click to show": "Texto oculto: haz clic para mostrarlo"
 	},
 	"fr_FR": {
 		"_plural": "nplurals=2; plural=n > 1;",
@@ -78,7 +86,11 @@
 		"hide": "masquer",
 		"blur": "flou",
 		"sensitive": "sensible",
-		"censor": "censurer"
+		"censor": "censurer",
+		"Graphic content": "Contenu choquant",
+		"Flashing lights": "Lumières clignotantes",
+		"Nudity": "Nudité",
+		"Hidden text — click to show": "Texte masqué – cliquez pour afficher"
 	},
 	"it_IT": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -105,7 +117,11 @@
 		"hide": "nascondere",
 		"blur": "sfocare",
 		"sensitive": "sensibile",
-		"censor": "censurare"
+		"censor": "censurare",
+		"Graphic content": "Contenuti espliciti",
+		"Flashing lights": "Luci lampeggianti",
+		"Nudity": "Nudità",
+		"Hidden text — click to show": "Testo nascosto: fai clic per mostrarlo"
 	},
 	"nl_NL": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -132,7 +148,11 @@
 		"hide": "verbergen",
 		"blur": "vervagen",
 		"sensitive": "gevoelig",
-		"censor": "censureren"
+		"censor": "censureren",
+		"Graphic content": "Schokkende inhoud",
+		"Flashing lights": "Flitsende beelden",
+		"Nudity": "Naaktheid",
+		"Hidden text — click to show": "Verborgen tekst – klik om te tonen"
 	},
 	"pl_PL": {
 		"_plural": "nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);",
@@ -159,7 +179,11 @@
 		"hide": "ukryj",
 		"blur": "rozmycie",
 		"sensitive": "wrażliwe",
-		"censor": "cenzura"
+		"censor": "cenzura",
+		"Graphic content": "Drastyczne treści",
+		"Flashing lights": "Migające światła",
+		"Nudity": "Nagość",
+		"Hidden text — click to show": "Ukryty tekst – kliknij, aby pokazać"
 	},
 	"pt_BR": {
 		"_plural": "nplurals=2; plural=n > 1;",
@@ -186,7 +210,11 @@
 		"hide": "ocultar",
 		"blur": "desfocar",
 		"sensitive": "sensível",
-		"censor": "censurar"
+		"censor": "censurar",
+		"Graphic content": "Conteúdo forte",
+		"Flashing lights": "Luzes piscantes",
+		"Nudity": "Nudez",
+		"Hidden text — click to show": "Texto oculto – clique para mostrar"
 	},
 	"ru_RU": {
 		"_plural": "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);",
@@ -213,7 +241,11 @@
 		"hide": "скрыть",
 		"blur": "размытие",
 		"sensitive": "чувствительный",
-		"censor": "цензура"
+		"censor": "цензура",
+		"Graphic content": "Шокирующий контент",
+		"Flashing lights": "Мигающий свет",
+		"Nudity": "Обнажённое тело",
+		"Hidden text — click to show": "Скрытый текст — нажмите, чтобы показать"
 	},
 	"ja": {
 		"_plural": "nplurals=1; plural=0;",
@@ -240,7 +272,11 @@
 		"hide": "隠す",
 		"blur": "ぼかし",
 		"sensitive": "センシティブ",
-		"censor": "検閲"
+		"censor": "検閲",
+		"Graphic content": "刺激の強いコンテンツ",
+		"Flashing lights": "点滅する光",
+		"Nudity": "ヌード",
+		"Hidden text — click to show": "非表示のテキスト。クリックして表示"
 	},
 	"zh_CN": {
 		"_plural": "nplurals=1; plural=0;",
@@ -267,6 +303,10 @@
 		"hide": "隐藏",
 		"blur": "模糊",
 		"sensitive": "敏感",
-		"censor": "审查"
+		"censor": "审查",
+		"Graphic content": "令人不适的内容",
+		"Flashing lights": "闪烁画面",
+		"Nudity": "裸露内容",
+		"Hidden text — click to show": "隐藏的文字——点击显示"
 	}
 }

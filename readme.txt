@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.6.0
+Stable tag: 1.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ Hide content a reader should opt into seeing — spoilers, NSFW material, medica
 
 Two mechanisms:
 
-* **Spoiler block** — wraps any blocks (images, galleries, paragraphs, embeds) and blurs them under an overlay with a warning pill. Label presets (Spoiler, NSFW, Medical image, Content warning) plus free text.
+* **Spoiler block** — wraps any blocks (images, galleries, paragraphs, embeds) and blurs them under an overlay with a warning pill. Label presets (Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity) plus free text.
 * **Inline spoiler format** — obscures a word or phrase mid-sentence with a solid bar.
 
 Editor integration: block inserter entry, "Turn into Spoiler" transform for existing blocks, inline-format toolbar button, and a keyboard shortcut (Shift+Alt+S / Ctrl+Option+S) that wraps selected blocks or toggles the inline format on selected text.
@@ -40,6 +40,10 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
+
+= 1.7.0 =
+* Three new label presets: Graphic content, Flashing lights, Nudity (translated for all bundled locales).
+* Hovering hidden inline text now shows the browser's native tooltip ("Hidden text — click to show"); it disappears while the text is revealed.
 
 = 1.6.0 =
 * The spoiler wrapper now always spans the content area, like core's Group block. This replaces the shrink-wrap sizing from 1.4.1/1.5.2, which resolved percentage-based layouts (aligned figures, galleries, columns) against the wrong width on some themes. Content inside a spoiler now renders identically to the same content unwrapped, on any theme.

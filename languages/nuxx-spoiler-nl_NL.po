@@ -61,6 +61,18 @@ msgid "Content warning"
 msgstr "Inhoudswaarschuwing"
 
 #: build/spoiler-block/index.js:1
+msgid "Graphic content"
+msgstr "Schokkende inhoud"
+
+#: build/spoiler-block/index.js:1
+msgid "Flashing lights"
+msgstr "Flitsende beelden"
+
+#: build/spoiler-block/index.js:1
+msgid "Nudity"
+msgstr "Naaktheid"
+
+#: build/spoiler-block/index.js:1
 msgid "Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block)."
 msgstr "Geselecteerde blokken in een spoilerblok plaatsen (of een geselecteerd spoilerblok uitpakken)."
 
@@ -95,6 +107,10 @@ msgstr "Inhoud opnieuw verbergen"
 #: build/spoiler-block/view.js:1
 msgid "Hidden text; activate to reveal"
 msgstr "Verborgen tekst; activeer om te tonen"
+
+#: build/spoiler-block/view.js:1
+msgid "Hidden text — click to show"
+msgstr "Verborgen tekst – klik om te tonen"
 
 #: build/spoiler-block/block.json
 msgctxt "block title"

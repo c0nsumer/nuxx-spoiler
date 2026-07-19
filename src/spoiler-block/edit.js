@@ -25,6 +25,9 @@ const PRESET_LABELS = [
 	__( 'NSFW', 'nuxx-spoiler' ),
 	__( 'Medical image', 'nuxx-spoiler' ),
 	__( 'Content warning', 'nuxx-spoiler' ),
+	__( 'Graphic content', 'nuxx-spoiler' ),
+	__( 'Flashing lights', 'nuxx-spoiler' ),
+	__( 'Nudity', 'nuxx-spoiler' ),
 ];
 
 export default function Edit( { attributes, setAttributes } ) {

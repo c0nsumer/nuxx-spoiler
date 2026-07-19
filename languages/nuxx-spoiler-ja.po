@@ -61,6 +61,18 @@ msgid "Content warning"
 msgstr "コンテンツ警告"
 
 #: build/spoiler-block/index.js:1
+msgid "Graphic content"
+msgstr "刺激の強いコンテンツ"
+
+#: build/spoiler-block/index.js:1
+msgid "Flashing lights"
+msgstr "点滅する光"
+
+#: build/spoiler-block/index.js:1
+msgid "Nudity"
+msgstr "ヌード"
+
+#: build/spoiler-block/index.js:1
 msgid "Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block)."
 msgstr "選択したブロックをネタバレブロックで囲みます（または選択したネタバレブロックを解除します）。"
 
@@ -95,6 +107,10 @@ msgstr "コンテンツを再び隠す"
 #: build/spoiler-block/view.js:1
 msgid "Hidden text; activate to reveal"
 msgstr "非表示のテキスト。表示するには操作してください"
+
+#: build/spoiler-block/view.js:1
+msgid "Hidden text — click to show"
+msgstr "非表示のテキスト。クリックして表示"
 
 #: build/spoiler-block/block.json
 msgctxt "block title"

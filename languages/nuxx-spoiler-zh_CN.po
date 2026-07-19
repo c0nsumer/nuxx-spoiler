@@ -61,6 +61,18 @@ msgid "Content warning"
 msgstr "内容警告"
 
 #: build/spoiler-block/index.js:1
+msgid "Graphic content"
+msgstr "令人不适的内容"
+
+#: build/spoiler-block/index.js:1
+msgid "Flashing lights"
+msgstr "闪烁画面"
+
+#: build/spoiler-block/index.js:1
+msgid "Nudity"
+msgstr "裸露内容"
+
+#: build/spoiler-block/index.js:1
 msgid "Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block)."
 msgstr "将所选区块包裹进剧透区块（或解除所选剧透区块的包裹）。"
 
@@ -95,6 +107,10 @@ msgstr "重新隐藏内容"
 #: build/spoiler-block/view.js:1
 msgid "Hidden text; activate to reveal"
 msgstr "隐藏的文字；激活以显示"
+
+#: build/spoiler-block/view.js:1
+msgid "Hidden text — click to show"
+msgstr "隐藏的文字——点击显示"
 
 #: build/spoiler-block/block.json
 msgctxt "block title"

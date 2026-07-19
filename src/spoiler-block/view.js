@@ -68,10 +68,12 @@ function initInlineSpoiler( span ) {
 	span.appendChild( inner );
 
 	const hiddenLabel = __( 'Hidden text; activate to reveal', 'nuxx-spoiler' );
+	const hoverHint = __( 'Hidden text — click to show', 'nuxx-spoiler' );
 	span.setAttribute( 'role', 'button' );
 	span.setAttribute( 'tabindex', '0' );
 	span.setAttribute( 'aria-expanded', 'false' );
 	span.setAttribute( 'aria-label', hiddenLabel );
+	span.setAttribute( 'title', hoverHint );
 
 	const toggle = () => {
 		const revealed = span.classList.toggle( 'is-revealed' );
@@ -81,9 +83,11 @@ function initInlineSpoiler( span ) {
 			inner.removeAttribute( 'aria-hidden' );
 			// Let the accessible name come from the now-visible text.
 			span.removeAttribute( 'aria-label' );
+			span.removeAttribute( 'title' );
 		} else {
 			inner.setAttribute( 'aria-hidden', 'true' );
 			span.setAttribute( 'aria-label', hiddenLabel );
+			span.setAttribute( 'title', hoverHint );
 		}
 	};
 
