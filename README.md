@@ -40,6 +40,19 @@ npm run env start    # local WordPress via wp-env (requires Docker)
 npm run plugin-zip   # build an installable release zip
 ```
 
+## Translations
+
+Translations for ten locales are bundled (`de_DE`, `es_ES`, `fr_FR`, `it_IT`, `nl_NL`, `pl_PL`, `pt_BR`, `ru_RU`, `ja`, `zh_CN`) and load automatically when a site uses one of those languages. They are machine translations (AI-generated) that have not been reviewed by native speakers — corrections are very welcome, either as edits to the `.po` files in `languages/` or to the source table in `tools/translations.json`.
+
+To regenerate after strings change (requires `wp-env` running):
+
+```sh
+npm run env run cli -- wp i18n make-pot wp-content/plugins/<dir> wp-content/plugins/<dir>/languages/nuxx-spoiler.pot --exclude=node_modules,src --domain=nuxx-spoiler
+python3 tools/generate-po.py languages/nuxx-spoiler.pot tools/translations.json languages
+npm run env run cli -- wp i18n make-mo wp-content/plugins/<dir>/languages
+npm run env run cli -- wp i18n make-json wp-content/plugins/<dir>/languages --no-purge
+```
+
 ## Theming
 
 The inline spoiler bar color can be overridden by a theme:
