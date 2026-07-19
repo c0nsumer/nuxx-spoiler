@@ -1,6 +1,6 @@
 # Spoiler
 
-Spoilers for WordPress: blur images and obscure text behind a click-to-reveal content warning. Useful for spoilers, NSFW content, medical images, or anything else a reader should opt into seeing.
+Hide images, whole groups of blocks, or inline text behind a click-to-reveal content warning: blurred images, blacked-out text. Useful for spoilers, NSFW content, medical images, or anything else a reader should opt into seeing.
 
 <img src="assets/nuxx-spoiler-image.png" alt="An image hidden by the Spoiler block: blurred, with a SPOILER pill and a Click to show hint overlaid" width="500">
 

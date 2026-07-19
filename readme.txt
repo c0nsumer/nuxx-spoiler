@@ -8,7 +8,7 @@ Stable tag: 1.11.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Blur images and obscure text behind a click-to-reveal content warning.
+Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning.
 
 == Description ==
 

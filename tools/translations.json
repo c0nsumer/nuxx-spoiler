@@ -17,7 +17,6 @@
 		"Shown on the overlay so visitors know why the content is hidden.": "Wird auf der Überlagerung angezeigt, damit Besucher wissen, warum der Inhalt verborgen ist.",
 		"Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block).": "Ausgewählte Blöcke in einen Spoiler-Block einschließen (oder einen ausgewählten Spoiler-Block auflösen).",
 		"Hide images or text behind a blurred, click-to-reveal content warning.": "Bilder oder Text hinter einer unscharfen, per Klick aufdeckbaren Inhaltswarnung verbergen.",
-		"Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.": "Bilder unscharf machen und Text hinter einer per Klick aufdeckbaren Inhaltswarnung verbergen. Fügt dem Block-Editor einen Spoiler-Block und ein Inline-Spoiler-Textformat hinzu.",
 		"spoiler": "spoiler",
 		"nsfw": "nsfw",
 		"content warning": "inhaltswarnung",
@@ -30,7 +29,8 @@
 		"Nudity": "Nacktheit",
 		"Hidden text — click to show": "Verborgener Text – zum Anzeigen klicken",
 		"Hide behind a spoiler": "Hinter einem Spoiler verbergen",
-		"Blur the image in place until a visitor clicks to show it.": "Das Bild an Ort und Stelle unscharf machen, bis ein Besucher es per Klick anzeigt."
+		"Blur the image in place until a visitor clicks to show it.": "Das Bild an Ort und Stelle unscharf machen, bis ein Besucher es per Klick anzeigt.",
+		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Bilder, Blockgruppen oder Text im Fließtext hinter einer unscharfen, per Klick aufdeckbaren Inhaltswarnung verbergen. Fügt dem Block-Editor einen Spoiler-Block, eine Spoiler-Einstellung für Bilder und ein Inline-Spoiler-Textformat hinzu."
 	},
 	"es_ES": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -50,7 +50,6 @@
 		"Shown on the overlay so visitors know why the content is hidden.": "Se muestra sobre la superposición para que los visitantes sepan por qué el contenido está oculto.",
 		"Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block).": "Envuelve los bloques seleccionados en un bloque de spoiler (o desenvuelve un bloque de spoiler seleccionado).",
 		"Hide images or text behind a blurred, click-to-reveal content warning.": "Oculta imágenes o texto tras una advertencia de contenido difuminada que se revela al hacer clic.",
-		"Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.": "Difumina imágenes y oculta texto tras una advertencia de contenido que se revela al hacer clic. Añade un bloque de spoiler y un formato de texto de spoiler en línea al editor de bloques.",
 		"spoiler": "spoiler",
 		"nsfw": "nsfw",
 		"content warning": "advertencia de contenido",
@@ -63,7 +62,8 @@
 		"Nudity": "Desnudos",
 		"Hidden text — click to show": "Texto oculto: haz clic para mostrarlo",
 		"Hide behind a spoiler": "Ocultar tras un spoiler",
-		"Blur the image in place until a visitor clicks to show it.": "Difumina la imagen en su sitio hasta que un visitante haga clic para mostrarla."
+		"Blur the image in place until a visitor clicks to show it.": "Difumina la imagen en su sitio hasta que un visitante haga clic para mostrarla.",
+		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Oculta imágenes, grupos de bloques o texto en línea tras una advertencia de contenido difuminada que se revela al hacer clic. Añade al editor de bloques un bloque de spoiler, un ajuste de spoiler para imágenes y un formato de texto de spoiler en línea."
 	},
 	"fr_FR": {
 		"_plural": "nplurals=2; plural=n > 1;",
@@ -83,7 +83,6 @@
 		"Shown on the overlay so visitors know why the content is hidden.": "Affiché sur la superposition pour que les visiteurs sachent pourquoi le contenu est masqué.",
 		"Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block).": "Regrouper les blocs sélectionnés dans un bloc Spoiler (ou dissocier un bloc Spoiler sélectionné).",
 		"Hide images or text behind a blurred, click-to-reveal content warning.": "Masquez des images ou du texte derrière un avertissement de contenu flouté, révélé au clic.",
-		"Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.": "Floute les images et masque le texte derrière un avertissement de contenu révélé au clic. Ajoute un bloc Spoiler et un format de texte spoiler en ligne à l'éditeur de blocs.",
 		"spoiler": "spoiler",
 		"nsfw": "nsfw",
 		"content warning": "avertissement de contenu",
@@ -96,7 +95,8 @@
 		"Nudity": "Nudité",
 		"Hidden text — click to show": "Texte masqué – cliquez pour afficher",
 		"Hide behind a spoiler": "Masquer derrière un spoiler",
-		"Blur the image in place until a visitor clicks to show it.": "Floute l'image sur place jusqu'à ce qu'un visiteur clique pour l'afficher."
+		"Blur the image in place until a visitor clicks to show it.": "Floute l'image sur place jusqu'à ce qu'un visiteur clique pour l'afficher.",
+		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Masquez des images, des groupes de blocs ou du texte en ligne derrière un avertissement de contenu flouté, révélé au clic. Ajoute à l'éditeur de blocs un bloc Spoiler, un réglage de spoiler pour les images et un format de texte spoiler en ligne."
 	},
 	"it_IT": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -116,7 +116,6 @@
 		"Shown on the overlay so visitors know why the content is hidden.": "Mostrata sull'overlay così i visitatori sanno perché il contenuto è nascosto.",
 		"Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block).": "Racchiudi i blocchi selezionati in un blocco Spoiler (o estrai i blocchi da un blocco Spoiler selezionato).",
 		"Hide images or text behind a blurred, click-to-reveal content warning.": "Nascondi immagini o testo dietro un avviso sui contenuti sfocato che si rivela con un clic.",
-		"Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.": "Sfoca le immagini e nasconde il testo dietro un avviso sui contenuti che si rivela con un clic. Aggiunge un blocco Spoiler e un formato di testo spoiler in linea all'editor a blocchi.",
 		"spoiler": "spoiler",
 		"nsfw": "nsfw",
 		"content warning": "avviso sui contenuti",
@@ -129,7 +128,8 @@
 		"Nudity": "Nudità",
 		"Hidden text — click to show": "Testo nascosto: fai clic per mostrarlo",
 		"Hide behind a spoiler": "Nascondi dietro uno spoiler",
-		"Blur the image in place until a visitor clicks to show it.": "Sfoca l'immagine al suo posto finché un visitatore non fa clic per mostrarla."
+		"Blur the image in place until a visitor clicks to show it.": "Sfoca l'immagine al suo posto finché un visitatore non fa clic per mostrarla.",
+		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Nascondi immagini, gruppi di blocchi o testo in linea dietro un avviso sui contenuti sfocato che si rivela con un clic. Aggiunge all'editor a blocchi un blocco Spoiler, un'impostazione spoiler per le immagini e un formato di testo spoiler in linea."
 	},
 	"nl_NL": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -149,7 +149,6 @@
 		"Shown on the overlay so visitors know why the content is hidden.": "Wordt op de overlay getoond zodat bezoekers weten waarom de inhoud verborgen is.",
 		"Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block).": "Geselecteerde blokken in een spoilerblok plaatsen (of een geselecteerd spoilerblok uitpakken).",
 		"Hide images or text behind a blurred, click-to-reveal content warning.": "Verberg afbeeldingen of tekst achter een vervaagde inhoudswaarschuwing die met een klik wordt onthuld.",
-		"Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.": "Vervaagt afbeeldingen en verbergt tekst achter een inhoudswaarschuwing die met een klik wordt onthuld. Voegt een spoilerblok en een inline spoiler-tekstformaat toe aan de blok-editor.",
 		"spoiler": "spoiler",
 		"nsfw": "nsfw",
 		"content warning": "inhoudswaarschuwing",
@@ -162,7 +161,8 @@
 		"Nudity": "Naaktheid",
 		"Hidden text — click to show": "Verborgen tekst – klik om te tonen",
 		"Hide behind a spoiler": "Achter een spoiler verbergen",
-		"Blur the image in place until a visitor clicks to show it.": "Vervaagt de afbeelding op haar plek totdat een bezoeker klikt om deze te tonen."
+		"Blur the image in place until a visitor clicks to show it.": "Vervaagt de afbeelding op haar plek totdat een bezoeker klikt om deze te tonen.",
+		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Verberg afbeeldingen, groepen blokken of inline tekst achter een vervaagde inhoudswaarschuwing die met een klik wordt onthuld. Voegt aan de blok-editor een spoilerblok, een spoilerinstelling voor afbeeldingen en een inline spoiler-tekstformaat toe."
 	},
 	"pl_PL": {
 		"_plural": "nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);",
@@ -182,7 +182,6 @@
 		"Shown on the overlay so visitors know why the content is hidden.": "Wyświetlane na nakładce, aby odwiedzający wiedzieli, dlaczego treść jest ukryta.",
 		"Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block).": "Umieść zaznaczone bloki w bloku spoilera (lub rozpakuj zaznaczony blok spoilera).",
 		"Hide images or text behind a blurred, click-to-reveal content warning.": "Ukryj obrazy lub tekst za rozmytym ostrzeżeniem o treści, odsłanianym kliknięciem.",
-		"Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.": "Rozmywa obrazy i ukrywa tekst za ostrzeżeniem o treści odsłanianym kliknięciem. Dodaje do edytora bloków blok spoilera oraz format tekstu spoilera w wierszu.",
 		"spoiler": "spoiler",
 		"nsfw": "nsfw",
 		"content warning": "ostrzeżenie o treści",
@@ -195,7 +194,8 @@
 		"Nudity": "Nagość",
 		"Hidden text — click to show": "Ukryty tekst – kliknij, aby pokazać",
 		"Hide behind a spoiler": "Ukryj za spoilerem",
-		"Blur the image in place until a visitor clicks to show it.": "Rozmywa obraz w miejscu, dopóki odwiedzający nie kliknie, aby go pokazać."
+		"Blur the image in place until a visitor clicks to show it.": "Rozmywa obraz w miejscu, dopóki odwiedzający nie kliknie, aby go pokazać.",
+		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Ukryj obrazy, grupy bloków lub tekst w wierszu za rozmytym ostrzeżeniem o treści, odsłanianym kliknięciem. Dodaje do edytora bloków blok spoilera, ustawienie spoilera dla obrazów oraz format tekstu spoilera w wierszu."
 	},
 	"pt_BR": {
 		"_plural": "nplurals=2; plural=n > 1;",
@@ -215,7 +215,6 @@
 		"Shown on the overlay so visitors know why the content is hidden.": "Exibido na sobreposição para que os visitantes saibam por que o conteúdo está oculto.",
 		"Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block).": "Envolve os blocos selecionados em um bloco de spoiler (ou desagrupa um bloco de spoiler selecionado).",
 		"Hide images or text behind a blurred, click-to-reveal content warning.": "Oculte imagens ou texto atrás de um aviso de conteúdo desfocado, revelado com um clique.",
-		"Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.": "Desfoca imagens e oculta texto atrás de um aviso de conteúdo revelado com um clique. Adiciona um bloco de spoiler e um formato de texto de spoiler em linha ao editor de blocos.",
 		"spoiler": "spoiler",
 		"nsfw": "nsfw",
 		"content warning": "aviso de conteúdo",
@@ -228,7 +227,8 @@
 		"Nudity": "Nudez",
 		"Hidden text — click to show": "Texto oculto – clique para mostrar",
 		"Hide behind a spoiler": "Ocultar atrás de um spoiler",
-		"Blur the image in place until a visitor clicks to show it.": "Desfoca a imagem no lugar até que um visitante clique para mostrá-la."
+		"Blur the image in place until a visitor clicks to show it.": "Desfoca a imagem no lugar até que um visitante clique para mostrá-la.",
+		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Oculte imagens, grupos de blocos ou texto em linha atrás de um aviso de conteúdo desfocado, revelado com um clique. Adiciona ao editor de blocos um bloco de spoiler, uma configuração de spoiler para imagens e um formato de texto de spoiler em linha."
 	},
 	"ru_RU": {
 		"_plural": "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);",
@@ -248,7 +248,6 @@
 		"Shown on the overlay so visitors know why the content is hidden.": "Отображается на накладке, чтобы посетители знали, почему содержимое скрыто.",
 		"Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block).": "Обернуть выбранные блоки в блок «Спойлер» (или развернуть выбранный блок «Спойлер»).",
 		"Hide images or text behind a blurred, click-to-reveal content warning.": "Скрывайте изображения или текст за размытым предупреждением, раскрываемым по щелчку.",
-		"Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.": "Размывает изображения и скрывает текст за предупреждением, раскрываемым по щелчку. Добавляет в редактор блоков блок «Спойлер» и встроенный текстовый формат спойлера.",
 		"spoiler": "спойлер",
 		"nsfw": "nsfw",
 		"content warning": "предупреждение о содержании",
@@ -261,7 +260,8 @@
 		"Nudity": "Обнажённое тело",
 		"Hidden text — click to show": "Скрытый текст — нажмите, чтобы показать",
 		"Hide behind a spoiler": "Скрыть за спойлером",
-		"Blur the image in place until a visitor clicks to show it.": "Размывает изображение на месте, пока посетитель не нажмёт, чтобы показать его."
+		"Blur the image in place until a visitor clicks to show it.": "Размывает изображение на месте, пока посетитель не нажмёт, чтобы показать его.",
+		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Скрывайте изображения, группы блоков или текст в строке за размытым предупреждением, раскрываемым по щелчку. Добавляет в редактор блоков блок «Спойлер», настройку спойлера для изображений и встроенный текстовый формат спойлера."
 	},
 	"ja": {
 		"_plural": "nplurals=1; plural=0;",
@@ -281,7 +281,6 @@
 		"Shown on the overlay so visitors know why the content is hidden.": "オーバーレイに表示され、コンテンツが非表示になっている理由を訪問者に伝えます。",
 		"Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block).": "選択したブロックをネタバレブロックで囲みます（または選択したネタバレブロックを解除します）。",
 		"Hide images or text behind a blurred, click-to-reveal content warning.": "画像やテキストをぼかしとコンテンツ警告で隠し、クリックで表示します。",
-		"Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.": "画像をぼかし、テキストをクリックで表示できるコンテンツ警告の後ろに隠します。ブロックエディターにネタバレブロックとインラインのネタバレ書式を追加します。",
 		"spoiler": "ネタバレ",
 		"nsfw": "nsfw",
 		"content warning": "コンテンツ警告",
@@ -294,7 +293,8 @@
 		"Nudity": "ヌード",
 		"Hidden text — click to show": "非表示のテキスト。クリックして表示",
 		"Hide behind a spoiler": "ネタバレとして隠す",
-		"Blur the image in place until a visitor clicks to show it.": "訪問者がクリックして表示するまで、画像をその場でぼかします。"
+		"Blur the image in place until a visitor clicks to show it.": "訪問者がクリックして表示するまで、画像をその場でぼかします。",
+		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "画像、ブロックのグループ、行内のテキストをぼかしとクリックで表示できるコンテンツ警告の後ろに隠します。ブロックエディターにネタバレブロック、画像のネタバレ設定、インラインのネタバレ書式を追加します。"
 	},
 	"zh_CN": {
 		"_plural": "nplurals=1; plural=0;",
@@ -314,7 +314,6 @@
 		"Shown on the overlay so visitors know why the content is hidden.": "显示在遮罩上，让访客知道内容被隐藏的原因。",
 		"Wrap the selected blocks in a Spoiler block (or unwrap a selected Spoiler block).": "将所选区块包裹进剧透区块（或解除所选剧透区块的包裹）。",
 		"Hide images or text behind a blurred, click-to-reveal content warning.": "将图片或文字隐藏在模糊的内容警告后面，点击即可显示。",
-		"Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.": "模糊图片并将文字隐藏在点击显示的内容警告后面。为区块编辑器添加剧透区块和行内剧透文字格式。",
 		"spoiler": "剧透",
 		"nsfw": "nsfw",
 		"content warning": "内容警告",
@@ -327,6 +326,7 @@
 		"Nudity": "裸露内容",
 		"Hidden text — click to show": "隐藏的文字——点击显示",
 		"Hide behind a spoiler": "隐藏为剧透",
-		"Blur the image in place until a visitor clicks to show it.": "将图片就地模糊，直到访客点击显示。"
+		"Blur the image in place until a visitor clicks to show it.": "将图片就地模糊，直到访客点击显示。",
+		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "将图片、区块组或行内文字隐藏在模糊的点击显示内容警告后面。为区块编辑器添加剧透区块、图片剧透设置和行内剧透文字格式。"
 	}
 }

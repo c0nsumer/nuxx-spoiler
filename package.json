@@ -1,7 +1,7 @@
 {
 	"name": "nuxx-spoiler",
 	"version": "1.11.0",
-	"description": "Spoilers for WordPress: blur images and obscure text behind a click-to-reveal content warning.",
+	"description": "Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning in WordPress.",
 	"author": "Steve Vigneau <steve@nuxx.net> (https://nuxx.net)",
 	"license": "GPL-2.0-or-later",
 	"keywords": [

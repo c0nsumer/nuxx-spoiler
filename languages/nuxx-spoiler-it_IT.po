@@ -13,7 +13,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: nuxx-spoiler.php
 #: build/spoiler-block/render.php:20
-#: nuxx-spoiler.php:100
+#: nuxx-spoiler.php:101
 #: build/spoiler-block/index.js:1
 msgid "Spoiler"
 msgstr "Spoiler"
@@ -25,8 +25,8 @@ msgstr ""
 
 #. Description of the plugin
 #: nuxx-spoiler.php
-msgid "Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor."
-msgstr "Sfoca le immagini e nasconde il testo dietro un avviso sui contenuti che si rivela con un clic. Aggiunge un blocco Spoiler e un formato di testo spoiler in linea all'editor a blocchi."
+msgid "Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor."
+msgstr "Nascondi immagini, gruppi di blocchi o testo in linea dietro un avviso sui contenuti sfocato che si rivela con un clic. Aggiunge all'editor a blocchi un blocco Spoiler, un'impostazione spoiler per le immagini e un formato di testo spoiler in linea."
 
 #. Author of the plugin
 #: nuxx-spoiler.php
@@ -40,13 +40,13 @@ msgstr ""
 
 #. translators: %s: warning label, e.g. "NSFW".
 #: build/spoiler-block/render.php:37
-#: nuxx-spoiler.php:124
+#: nuxx-spoiler.php:116
 #, php-format
 msgid "Show hidden content: %s"
 msgstr "Mostra contenuto nascosto: %s"
 
 #: build/spoiler-block/render.php:40
-#: nuxx-spoiler.php:126
+#: nuxx-spoiler.php:118
 #: build/spoiler-block/index.js:1
 msgid "Click to show"
 msgstr "Fai clic per mostrare"
