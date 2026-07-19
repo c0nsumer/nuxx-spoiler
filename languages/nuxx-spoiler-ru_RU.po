@@ -18,9 +18,8 @@ msgid "Spoiler"
 msgstr "Спойлер"
 
 #. Plugin URI of the plugin
-#. Author URI of the plugin
 #: nuxx-spoiler.php
-msgid "https://nuxx.net/"
+msgid "https://github.com/c0nsumer/nuxx-spoiler"
 msgstr ""
 
 #. Description of the plugin
@@ -31,6 +30,11 @@ msgstr "Размывает изображения и скрывает текст
 #. Author of the plugin
 #: nuxx-spoiler.php
 msgid "Steve Vigneau"
+msgstr ""
+
+#. Author URI of the plugin
+#: nuxx-spoiler.php
+msgid "https://nuxx.net/"
 msgstr ""
 
 #. translators: %s: warning label, e.g. "NSFW".

@@ -1,6 +1,6 @@
 /**
  * Inline spoiler text format for hiding a word or phrase mid-sentence.
- * Applied text renders as `<span class="wp-spoiler-inline">` and is shown as
+ * Applied text renders as `<span class="nuxx-spoiler-inline">` and is shown as
  * a black bar on the front end until clicked (see view.js / style.scss).
  */
 
@@ -41,6 +41,6 @@ function Edit( { isActive, value, onChange, onFocus } ) {
 registerFormatType( FORMAT_NAME, {
 	title: __( 'Spoiler', 'nuxx-spoiler' ),
 	tagName: 'span',
-	className: 'wp-spoiler-inline',
+	className: 'nuxx-spoiler-inline',
 	edit: Edit,
 } );

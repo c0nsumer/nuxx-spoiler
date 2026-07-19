@@ -26,8 +26,8 @@ function setBlockHidden( root, content, overlay, hidden ) {
 }
 
 function initBlockSpoiler( root ) {
-	const content = root.querySelector( ':scope > .wp-spoiler__content' );
-	const overlay = root.querySelector( ':scope > .wp-spoiler__overlay' );
+	const content = root.querySelector( ':scope > .nuxx-spoiler__content' );
+	const overlay = root.querySelector( ':scope > .nuxx-spoiler__overlay' );
 
 	if ( ! content || ! overlay ) {
 		return;
@@ -35,7 +35,7 @@ function initBlockSpoiler( root ) {
 
 	const rehide = document.createElement( 'button' );
 	rehide.type = 'button';
-	rehide.className = 'wp-spoiler__rehide';
+	rehide.className = 'nuxx-spoiler__rehide';
 	rehide.title = __( 'Hide again', 'nuxx-spoiler' );
 	rehide.setAttribute(
 		'aria-label',
@@ -59,7 +59,7 @@ function initInlineSpoiler( span ) {
 	// Wrap the hidden text so it can be aria-hidden while the outer element
 	// acts as the labeled, focusable control.
 	const inner = document.createElement( 'span' );
-	inner.className = 'wp-spoiler-inline__text';
+	inner.className = 'nuxx-spoiler-inline__text';
 	inner.setAttribute( 'aria-hidden', 'true' );
 
 	while ( span.firstChild ) {
@@ -67,7 +67,10 @@ function initInlineSpoiler( span ) {
 	}
 	span.appendChild( inner );
 
-	const hiddenLabel = __( 'Hidden text; activate to reveal', 'nuxx-spoiler' );
+	const hiddenLabel = __(
+		'Hidden text; activate to reveal',
+		'nuxx-spoiler'
+	);
 	span.setAttribute( 'role', 'button' );
 	span.setAttribute( 'tabindex', '0' );
 	span.setAttribute( 'aria-expanded', 'false' );
@@ -97,19 +100,23 @@ function initInlineSpoiler( span ) {
 }
 
 function init() {
-	document.querySelectorAll( '.wp-spoiler' ).forEach( ( root ) => {
+	document.querySelectorAll( '.nuxx-spoiler' ).forEach( ( root ) => {
 		if ( ! root.dataset.spoilerInit ) {
 			root.dataset.spoilerInit = 'true';
 			initBlockSpoiler( root );
 		}
 	} );
 
-	document.querySelectorAll( '.wp-spoiler-inline' ).forEach( ( span ) => {
-		if ( ! span.dataset.spoilerInit ) {
-			span.dataset.spoilerInit = 'true';
-			initInlineSpoiler( span );
-		}
-	} );
+	// .wp-spoiler-inline is the legacy class stored in content by pre-1.4
+	// versions of the inline format; keep recognizing it.
+	document
+		.querySelectorAll( '.nuxx-spoiler-inline, .wp-spoiler-inline' )
+		.forEach( ( span ) => {
+			if ( ! span.dataset.spoilerInit ) {
+				span.dataset.spoilerInit = 'true';
+				initInlineSpoiler( span );
+			}
+		} );
 }
 
 if ( document.readyState === 'loading' ) {

@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:       Spoiler
- * Plugin URI:        https://nuxx.net/
+ * Plugin URI:        https://github.com/c0nsumer/nuxx-spoiler
  * Description:       Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.
- * Version:           1.3.0
+ * Version:           1.4.0
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Steve Vigneau
@@ -65,7 +65,9 @@ function nuxx_spoiler_maybe_enqueue_inline_assets() {
 			continue;
 		}
 
-		if ( false === strpos( $queried_post->post_content, 'wp-spoiler-inline' ) ) {
+		// Matches both the current class (nuxx-spoiler-inline) and the
+		// legacy one (wp-spoiler-inline) stored by pre-1.4 versions.
+		if ( false === strpos( $queried_post->post_content, 'spoiler-inline' ) ) {
 			continue;
 		}
 

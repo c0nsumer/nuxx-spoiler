@@ -7,6 +7,8 @@ import sys
 POT = sys.argv[1]
 TABLE = sys.argv[2]
 OUTDIR = sys.argv[3]
+# Text domain, derived from the POT filename (e.g. nuxx-spoiler.pot).
+DOMAIN = POT.rsplit("/", 1)[-1].removesuffix(".pot")
 
 with open(TABLE, encoding="utf-8") as fh:
     table = json.load(fh)
@@ -68,7 +70,7 @@ for locale, strings in table.items():
         )
         out.append(new_entry)
         out.append("")
-    path = f"{OUTDIR}/nuxx-spoiler-{locale}.po"
+    path = f"{OUTDIR}/{DOMAIN}-{locale}.po"
     with open(path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(out).strip() + "\n")
     total = len(body_entries)

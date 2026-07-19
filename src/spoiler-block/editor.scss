@@ -4,12 +4,12 @@
  * outline + label chip that mark the spoiler region.
  */
 
-.wp-spoiler.is-spoiler-editor {
+.nuxx-spoiler.is-spoiler-editor {
 	border: 1.5px dashed rgba(120, 120, 120, 0.6);
 	overflow: visible;
 
 	// Keep content readable while authoring.
-	&:not(.is-preview-hidden) > .wp-spoiler__content {
+	&:not(.is-preview-hidden) > .nuxx-spoiler__content {
 		filter: none;
 		transform: none;
 		pointer-events: auto;
@@ -36,7 +36,7 @@
 	}
 
 	// The preview overlay is informational only; clicks fall through.
-	> .wp-spoiler__overlay {
+	> .nuxx-spoiler__overlay {
 		pointer-events: none;
 	}
 
@@ -47,6 +47,7 @@
 
 // The inline format must stay readable while authoring; front-end CSS makes
 // it transparent. `html` ancestor wins the specificity tie.
+html .editor-styles-wrapper .nuxx-spoiler-inline,
 html .editor-styles-wrapper .wp-spoiler-inline {
 	background: rgba(140, 140, 140, 0.25);
 	outline: 1px dashed rgba(120, 120, 120, 0.8);

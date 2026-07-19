@@ -4,7 +4,7 @@
  * hiding so authors can see what they're writing).
  */
 
-.wp-spoiler {
+.nuxx-spoiler {
 	position: relative;
 
 	// Hug the content: contain inner margins (flow-root) and trim the
@@ -25,7 +25,7 @@
 	// While hidden, the content itself stays unstyled (the overlay's
 	// backdrop-filter does the blurring) so revealing restores the exact
 	// original rendering — no scaling, clipping, or rounded corners.
-	&:not(.is-revealed) > .wp-spoiler__content {
+	&:not(.is-revealed) > .nuxx-spoiler__content {
 		pointer-events: none;
 		user-select: none;
 		-webkit-user-select: none;
@@ -39,7 +39,7 @@
 		&:not(.is-revealed) {
 			overflow: hidden;
 
-			> .wp-spoiler__content {
+			> .nuxx-spoiler__content {
 				filter: blur(24px);
 				transform: scale(1.03);
 			}
@@ -88,8 +88,8 @@
 		line-height: 1.4;
 	}
 
-	&__overlay:hover .wp-spoiler__pill,
-	&__overlay:focus-visible .wp-spoiler__pill {
+	&__overlay:hover .nuxx-spoiler__pill,
+	&__overlay:focus-visible .nuxx-spoiler__pill {
 		background: rgba(0, 0, 0, 0.95);
 	}
 
@@ -137,20 +137,22 @@
 		// Fade out rather than display: none so the blur dissolves;
 		// visibility: hidden then removes it from tab order and
 		// assistive tech once the fade completes.
-		.wp-spoiler__overlay {
+		.nuxx-spoiler__overlay {
 			opacity: 0;
 			visibility: hidden;
 			pointer-events: none;
 		}
 
-		.wp-spoiler__rehide {
+		.nuxx-spoiler__rehide {
 			display: inline-flex;
 		}
 	}
 }
 
 // Inline spoiler: a solid bar over the text. Themes can override the
-// bar color via --nuxx-spoiler-bar.
+// bar color via --nuxx-spoiler-bar. .wp-spoiler-inline is the legacy
+// class stored in content by pre-1.4 versions.
+.nuxx-spoiler-inline,
 .wp-spoiler-inline {
 	background: var(--nuxx-spoiler-bar, #202225);
 	border-radius: 0.25em;
@@ -182,7 +184,7 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-	.wp-spoiler__overlay {
+	.nuxx-spoiler__overlay {
 		transition: none;
 	}
 }

@@ -25,7 +25,7 @@ This is courtesy hiding, not security: the content is present in the page HTML a
 
 ## Installation
 
-1. Grab the latest release zip.
+1. Grab the latest release zip from the [releases page](https://github.com/c0nsumer/nuxx-spoiler/releases).
 2. In WordPress admin: Plugins → Add New Plugin → Upload Plugin → choose the zip → Activate.
 
 ## Development

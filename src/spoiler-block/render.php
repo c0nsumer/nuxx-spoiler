@@ -17,17 +17,17 @@ $nuxx_spoiler_label = ! empty( $attributes['label'] )
 	? $attributes['label']
 	: __( 'Spoiler', 'nuxx-spoiler' );
 ?>
-<div <?php echo get_block_wrapper_attributes( array( 'class' => 'wp-spoiler' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<div class="wp-spoiler__content" inert aria-hidden="true">
+<div <?php echo get_block_wrapper_attributes( array( 'class' => 'nuxx-spoiler' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<div class="nuxx-spoiler__content" inert aria-hidden="true">
 		<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- inner blocks markup. ?>
 	</div>
 	<button
 		type="button"
-		class="wp-spoiler__overlay"
+		class="nuxx-spoiler__overlay"
 		aria-expanded="false"
 		aria-label="<?php echo esc_attr( sprintf( /* translators: %s: warning label, e.g. "NSFW". */ __( 'Show hidden content: %s', 'nuxx-spoiler' ), $nuxx_spoiler_label ) ); ?>"
 	>
-		<span class="wp-spoiler__pill"><?php echo esc_html( $nuxx_spoiler_label ); ?></span>
-		<span class="wp-spoiler__hint"><?php esc_html_e( 'Click to show', 'nuxx-spoiler' ); ?></span>
+		<span class="nuxx-spoiler__pill"><?php echo esc_html( $nuxx_spoiler_label ); ?></span>
+		<span class="nuxx-spoiler__hint"><?php esc_html_e( 'Click to show', 'nuxx-spoiler' ); ?></span>
 	</button>
 </div>

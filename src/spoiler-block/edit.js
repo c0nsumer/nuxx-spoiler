@@ -34,13 +34,13 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	const blockProps = useBlockProps( {
 		className:
-			'wp-spoiler is-spoiler-editor' +
+			'nuxx-spoiler is-spoiler-editor' +
 			( isPreviewingHidden ? ' is-preview-hidden' : '' ),
 		'data-spoiler-label': effectiveLabel,
 	} );
 
 	const innerBlocksProps = useInnerBlocksProps(
-		{ className: 'wp-spoiler__content' },
+		{ className: 'nuxx-spoiler__content' },
 		{ template: [ [ 'core/paragraph' ] ] }
 	);
 
@@ -53,7 +53,10 @@ export default function Edit( { attributes, setAttributes } ) {
 						label={
 							isPreviewingHidden
 								? __( 'Show content', 'nuxx-spoiler' )
-								: __( 'Preview hidden state', 'nuxx-spoiler' )
+								: __(
+										'Preview hidden state',
+										'nuxx-spoiler'
+								  )
 						}
 						isPressed={ isPreviewingHidden }
 						onClick={ () =>
@@ -102,11 +105,11 @@ export default function Edit( { attributes, setAttributes } ) {
 			<div { ...blockProps }>
 				<div { ...innerBlocksProps } />
 				{ isPreviewingHidden && (
-					<div className="wp-spoiler__overlay" aria-hidden="true">
-						<span className="wp-spoiler__pill">
+					<div className="nuxx-spoiler__overlay" aria-hidden="true">
+						<span className="nuxx-spoiler__pill">
 							{ effectiveLabel }
 						</span>
-						<span className="wp-spoiler__hint">
+						<span className="nuxx-spoiler__hint">
 							{ __( 'Click to show', 'nuxx-spoiler' ) }
 						</span>
 					</div>

@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,10 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
+
+= 1.4.0 =
+* The plugin now uses the unique nuxx-spoiler slug throughout (install directory, text domain, CSS class prefix) in preparation for public distribution. Installs of earlier versions must delete the old plugin entry and install this version; content is unaffected.
+* The legacy wp-spoiler-inline class stored in older posts is still recognized.
 
 = 1.3.0 =
 * Bundled translations for ten locales: German, Spanish, French, Italian, Dutch, Polish, Brazilian Portuguese, Russian, Japanese, and Simplified Chinese. These are machine translations, not yet reviewed by native speakers; corrections welcome.
