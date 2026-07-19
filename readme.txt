@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.4.1
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,9 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
+
+= 1.5.0 =
+* Added an Unwrap button to the Spoiler block's toolbar for turning a spoiler back into its contents in one click. (Ungroup in the options menu and the keyboard shortcut did this already, but were easy to miss.)
 
 = 1.4.1 =
 * The spoiler now shrink-wraps its content, so the blur, scrim, and re-hide button hug an image that is narrower than the content column instead of spanning the full column width. Use the block's alignment controls to position a shrunk spoiler.

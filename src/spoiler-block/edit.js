@@ -6,6 +6,7 @@ import { useState } from '@wordpress/element';
 import {
 	BlockControls,
 	InspectorControls,
+	store as blockEditorStore,
 	useBlockProps,
 	useInnerBlocksProps,
 } from '@wordpress/block-editor';
@@ -18,7 +19,9 @@ import {
 	ToolbarButton,
 	ToolbarGroup,
 } from '@wordpress/components';
-import { seen, unseen } from '@wordpress/icons';
+import { select, useDispatch, useSelect } from '@wordpress/data';
+import { cloneBlock } from '@wordpress/blocks';
+import { seen, ungroup, unseen } from '@wordpress/icons';
 
 const PRESET_LABELS = [
 	__( 'Spoiler', 'nuxx-spoiler' ),
@@ -27,10 +30,25 @@ const PRESET_LABELS = [
 	__( 'Content warning', 'nuxx-spoiler' ),
 ];
 
-export default function Edit( { attributes, setAttributes } ) {
+export default function Edit( { attributes, setAttributes, clientId } ) {
 	const { label } = attributes;
 	const [ isPreviewingHidden, setIsPreviewingHidden ] = useState( false );
 	const effectiveLabel = label || __( 'Spoiler', 'nuxx-spoiler' );
+
+	const { replaceBlocks } = useDispatch( blockEditorStore );
+	const hasInnerBlocks = useSelect(
+		( blockEditorSelect ) =>
+			blockEditorSelect( blockEditorStore ).getBlockCount( clientId ) > 0,
+		[ clientId ]
+	);
+
+	const unwrap = () => {
+		const innerBlocks = select( blockEditorStore ).getBlocks( clientId );
+		replaceBlocks(
+			clientId,
+			innerBlocks.map( ( block ) => cloneBlock( block ) )
+		);
+	};
 
 	const blockProps = useBlockProps( {
 		className:
@@ -53,15 +71,21 @@ export default function Edit( { attributes, setAttributes } ) {
 						label={
 							isPreviewingHidden
 								? __( 'Show content', 'nuxx-spoiler' )
-								: __(
-										'Preview hidden state',
-										'nuxx-spoiler'
-								  )
+								: __( 'Preview hidden state', 'nuxx-spoiler' )
 						}
 						isPressed={ isPreviewingHidden }
 						onClick={ () =>
 							setIsPreviewingHidden( ! isPreviewingHidden )
 						}
+					/>
+					<ToolbarButton
+						icon={ ungroup }
+						label={ __(
+							'Unwrap: remove the spoiler, keep the content',
+							'nuxx-spoiler'
+						) }
+						onClick={ unwrap }
+						disabled={ ! hasInnerBlocks }
 					/>
 				</ToolbarGroup>
 			</BlockControls>
