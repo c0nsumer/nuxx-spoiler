@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.9.0
+Stable tag: 1.10.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
+
+= 1.10.0 =
+* "Turn into Spoiler" is no longer offered for a lone Image block — use the image's own "Hide behind a spoiler" setting instead, which blurs the image in place without breaking text flow. Multi-block selections (including images) still wrap in a Spoiler block as before.
 
 = 1.9.0 =
 * New: every Image block has a "Hide behind a spoiler" setting (in the block's Settings tab) that blurs the image in place. Floated and aligned images keep their exact position, captions, and text wrap — use this instead of the Spoiler block for images in flowing text. The hidden state is server-rendered, so it fails closed without JavaScript.

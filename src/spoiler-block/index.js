@@ -25,11 +25,22 @@ registerBlockType( metadata.name, {
 				type: 'block',
 				isMultiBlock: true,
 				blocks: [ '*' ],
-				isMatch: ( attributes, blocks ) =>
-					! (
-						blocks.length === 1 &&
-						blocks[ 0 ].name === metadata.name
-					),
+				isMatch: ( attributes, blocks ) => {
+					if ( blocks.length !== 1 ) {
+						return true;
+					}
+
+					// Don't offer wrapping for a lone Spoiler block, or
+					// for a lone Image block — images should use their
+					// own "Hide behind a spoiler" setting, which blurs
+					// in place without breaking text flow. (Transforms
+					// cannot redirect to a different block type, so the
+					// option is hidden rather than repurposed.)
+					return (
+						blocks[ 0 ].name !== metadata.name &&
+						blocks[ 0 ].name !== 'core/image'
+					);
+				},
 				__experimentalConvert: ( blocks ) =>
 					createBlock(
 						metadata.name,

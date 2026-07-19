@@ -13,7 +13,7 @@ Spoilers for WordPress: blur images and obscure text behind a click-to-reveal co
 - **Warning label presets** — Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity — plus a free-text field, per block.
 - **First-class editor integration**:
   - Block inserter entry (search "spoiler", "nsfw", "hide", "blur"…)
-  - "Turn into Spoiler" — select any block(s) and transform them into a Spoiler; Ungroup (in the block's options menu) transforms back
+  - "Turn into Spoiler" — select any block(s) and transform them into a Spoiler; Ungroup (in the block's options menu) transforms back. A lone Image block is steered to its own spoiler setting instead, since wrapping a floated image would break text flow
   - Toolbar button for the inline format (under the ¶ formatting menu)
   - "Preview hidden state" toolbar toggle so you can see what visitors will see
 - **Accessibility-minded** — the overlay is a real button; the block's hidden content is `inert` and `aria-hidden` until revealed, so screen readers, tab order, and find-in-page can't leak it. Reveal/re-hide manage focus. `prefers-reduced-motion` is respected.
