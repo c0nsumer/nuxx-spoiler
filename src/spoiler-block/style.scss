@@ -6,17 +6,29 @@
 
 .wp-spoiler {
 	position: relative;
-	overflow: hidden;
-	border-radius: 8px;
 
-	&__content {
-		// scale() hides the transparent edge bleed the blur creates.
-		filter: blur(24px);
-		transform: scale(1.03);
+	// While hidden, the content itself stays unstyled (the overlay's
+	// backdrop-filter does the blurring) so revealing restores the exact
+	// original rendering — no scaling, clipping, or rounded corners.
+	&:not(.is-revealed) > .wp-spoiler__content {
 		pointer-events: none;
 		user-select: none;
 		-webkit-user-select: none;
-		transition: filter 0.25s ease, transform 0.25s ease;
+	}
+
+	// Fallback for browsers without backdrop-filter: blur the content
+	// directly; scale() hides the transparent edge bleed blur creates,
+	// and overflow keeps the bleed inside the box.
+	@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+
+		&:not(.is-revealed) {
+			overflow: hidden;
+
+			> .wp-spoiler__content {
+				filter: blur(24px);
+				transform: scale(1.03);
+			}
+		}
 	}
 
 	&__overlay {
@@ -32,11 +44,14 @@
 		margin: 0;
 		padding: 1em;
 		background: rgba(0, 0, 0, 0.25);
+		-webkit-backdrop-filter: blur(24px);
+		backdrop-filter: blur(24px);
 		border: 0;
 		border-radius: 0;
 		appearance: none;
 		-webkit-appearance: none;
 		cursor: pointer;
+		transition: opacity 0.25s ease, visibility 0.25s;
 
 		&:focus-visible {
 			outline: 2px solid #fff;
@@ -72,8 +87,8 @@
 	// Created by view.js after the first reveal.
 	&__rehide {
 		position: absolute;
-		top: 0.5em;
-		right: 0.5em;
+		top: 12px;
+		right: 12px;
 		z-index: 2;
 		display: none;
 		align-items: center;
@@ -104,16 +119,13 @@
 
 	&.is-revealed {
 
-		.wp-spoiler__content {
-			filter: none;
-			transform: none;
-			pointer-events: auto;
-			user-select: text;
-			-webkit-user-select: text;
-		}
-
+		// Fade out rather than display: none so the blur dissolves;
+		// visibility: hidden then removes it from tab order and
+		// assistive tech once the fade completes.
 		.wp-spoiler__overlay {
-			display: none;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
 		}
 
 		.wp-spoiler__rehide {
@@ -155,7 +167,7 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-	.wp-spoiler__content {
+	.wp-spoiler__overlay {
 		transition: none;
 	}
 }
