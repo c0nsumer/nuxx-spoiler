@@ -13,6 +13,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: nuxx-spoiler.php
 #: build/spoiler-block/render.php:20
+#: nuxx-spoiler.php:100
 #: build/spoiler-block/index.js:1
 msgid "Spoiler"
 msgstr "Spoiler"
@@ -39,11 +40,13 @@ msgstr ""
 
 #. translators: %s: warning label, e.g. "NSFW".
 #: build/spoiler-block/render.php:37
+#: nuxx-spoiler.php:124
 #, php-format
 msgid "Show hidden content: %s"
 msgstr "Afficher le contenu masqué : %s"
 
 #: build/spoiler-block/render.php:40
+#: nuxx-spoiler.php:126
 #: build/spoiler-block/index.js:1
 msgid "Click to show"
 msgstr "Cliquez pour afficher"
@@ -73,6 +76,22 @@ msgid "Nudity"
 msgstr "Nudité"
 
 #: build/spoiler-block/index.js:1
+msgid "Label"
+msgstr "Étiquette"
+
+#: build/spoiler-block/index.js:1
+msgid "Shown on the overlay so visitors know why the content is hidden."
+msgstr "Affiché sur la superposition pour que les visiteurs sachent pourquoi le contenu est masqué."
+
+#: build/spoiler-block/index.js:1
+msgid "Hide behind a spoiler"
+msgstr "Masquer derrière un spoiler"
+
+#: build/spoiler-block/index.js:1
+msgid "Blur the image in place until a visitor clicks to show it."
+msgstr "Floute l'image sur place jusqu'à ce qu'un visiteur clique pour l'afficher."
+
+#: build/spoiler-block/index.js:1
 msgid "Show content"
 msgstr "Afficher le contenu"
 
@@ -83,14 +102,6 @@ msgstr "Prévisualiser l'état masqué"
 #: build/spoiler-block/index.js:1
 msgid "Warning label"
 msgstr "Étiquette d'avertissement"
-
-#: build/spoiler-block/index.js:1
-msgid "Label"
-msgstr "Étiquette"
-
-#: build/spoiler-block/index.js:1
-msgid "Shown on the overlay so visitors know why the content is hidden."
-msgstr "Affiché sur la superposition pour que les visiteurs sachent pourquoi le contenu est masqué."
 
 #: build/spoiler-block/view.js:1
 msgid "Hide again"

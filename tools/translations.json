@@ -28,7 +28,9 @@
 		"Graphic content": "Drastische Inhalte",
 		"Flashing lights": "Blinkende Lichter",
 		"Nudity": "Nacktheit",
-		"Hidden text — click to show": "Verborgener Text – zum Anzeigen klicken"
+		"Hidden text — click to show": "Verborgener Text – zum Anzeigen klicken",
+		"Hide behind a spoiler": "Hinter einem Spoiler verbergen",
+		"Blur the image in place until a visitor clicks to show it.": "Das Bild an Ort und Stelle unscharf machen, bis ein Besucher es per Klick anzeigt."
 	},
 	"es_ES": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -59,7 +61,9 @@
 		"Graphic content": "Contenido gráfico",
 		"Flashing lights": "Luces intermitentes",
 		"Nudity": "Desnudos",
-		"Hidden text — click to show": "Texto oculto: haz clic para mostrarlo"
+		"Hidden text — click to show": "Texto oculto: haz clic para mostrarlo",
+		"Hide behind a spoiler": "Ocultar tras un spoiler",
+		"Blur the image in place until a visitor clicks to show it.": "Difumina la imagen en su sitio hasta que un visitante haga clic para mostrarla."
 	},
 	"fr_FR": {
 		"_plural": "nplurals=2; plural=n > 1;",
@@ -90,7 +94,9 @@
 		"Graphic content": "Contenu choquant",
 		"Flashing lights": "Lumières clignotantes",
 		"Nudity": "Nudité",
-		"Hidden text — click to show": "Texte masqué – cliquez pour afficher"
+		"Hidden text — click to show": "Texte masqué – cliquez pour afficher",
+		"Hide behind a spoiler": "Masquer derrière un spoiler",
+		"Blur the image in place until a visitor clicks to show it.": "Floute l'image sur place jusqu'à ce qu'un visiteur clique pour l'afficher."
 	},
 	"it_IT": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -121,7 +127,9 @@
 		"Graphic content": "Contenuti espliciti",
 		"Flashing lights": "Luci lampeggianti",
 		"Nudity": "Nudità",
-		"Hidden text — click to show": "Testo nascosto: fai clic per mostrarlo"
+		"Hidden text — click to show": "Testo nascosto: fai clic per mostrarlo",
+		"Hide behind a spoiler": "Nascondi dietro uno spoiler",
+		"Blur the image in place until a visitor clicks to show it.": "Sfoca l'immagine al suo posto finché un visitatore non fa clic per mostrarla."
 	},
 	"nl_NL": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -152,7 +160,9 @@
 		"Graphic content": "Schokkende inhoud",
 		"Flashing lights": "Flitsende beelden",
 		"Nudity": "Naaktheid",
-		"Hidden text — click to show": "Verborgen tekst – klik om te tonen"
+		"Hidden text — click to show": "Verborgen tekst – klik om te tonen",
+		"Hide behind a spoiler": "Achter een spoiler verbergen",
+		"Blur the image in place until a visitor clicks to show it.": "Vervaagt de afbeelding op haar plek totdat een bezoeker klikt om deze te tonen."
 	},
 	"pl_PL": {
 		"_plural": "nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);",
@@ -183,7 +193,9 @@
 		"Graphic content": "Drastyczne treści",
 		"Flashing lights": "Migające światła",
 		"Nudity": "Nagość",
-		"Hidden text — click to show": "Ukryty tekst – kliknij, aby pokazać"
+		"Hidden text — click to show": "Ukryty tekst – kliknij, aby pokazać",
+		"Hide behind a spoiler": "Ukryj za spoilerem",
+		"Blur the image in place until a visitor clicks to show it.": "Rozmywa obraz w miejscu, dopóki odwiedzający nie kliknie, aby go pokazać."
 	},
 	"pt_BR": {
 		"_plural": "nplurals=2; plural=n > 1;",
@@ -214,7 +226,9 @@
 		"Graphic content": "Conteúdo forte",
 		"Flashing lights": "Luzes piscantes",
 		"Nudity": "Nudez",
-		"Hidden text — click to show": "Texto oculto – clique para mostrar"
+		"Hidden text — click to show": "Texto oculto – clique para mostrar",
+		"Hide behind a spoiler": "Ocultar atrás de um spoiler",
+		"Blur the image in place until a visitor clicks to show it.": "Desfoca a imagem no lugar até que um visitante clique para mostrá-la."
 	},
 	"ru_RU": {
 		"_plural": "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);",
@@ -245,7 +259,9 @@
 		"Graphic content": "Шокирующий контент",
 		"Flashing lights": "Мигающий свет",
 		"Nudity": "Обнажённое тело",
-		"Hidden text — click to show": "Скрытый текст — нажмите, чтобы показать"
+		"Hidden text — click to show": "Скрытый текст — нажмите, чтобы показать",
+		"Hide behind a spoiler": "Скрыть за спойлером",
+		"Blur the image in place until a visitor clicks to show it.": "Размывает изображение на месте, пока посетитель не нажмёт, чтобы показать его."
 	},
 	"ja": {
 		"_plural": "nplurals=1; plural=0;",
@@ -276,7 +292,9 @@
 		"Graphic content": "刺激の強いコンテンツ",
 		"Flashing lights": "点滅する光",
 		"Nudity": "ヌード",
-		"Hidden text — click to show": "非表示のテキスト。クリックして表示"
+		"Hidden text — click to show": "非表示のテキスト。クリックして表示",
+		"Hide behind a spoiler": "ネタバレとして隠す",
+		"Blur the image in place until a visitor clicks to show it.": "訪問者がクリックして表示するまで、画像をその場でぼかします。"
 	},
 	"zh_CN": {
 		"_plural": "nplurals=1; plural=0;",
@@ -307,6 +325,8 @@
 		"Graphic content": "令人不适的内容",
 		"Flashing lights": "闪烁画面",
 		"Nudity": "裸露内容",
-		"Hidden text — click to show": "隐藏的文字——点击显示"
+		"Hidden text — click to show": "隐藏的文字——点击显示",
+		"Hide behind a spoiler": "隐藏为剧透",
+		"Blur the image in place until a visitor clicks to show it.": "将图片就地模糊，直到访客点击显示。"
 	}
 }

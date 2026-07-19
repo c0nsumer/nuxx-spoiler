@@ -152,6 +152,29 @@
 	}
 }
 
+// Image-block spoiler (.nuxx-spoiler--media): the figure itself is the
+// spoiler root, so floats, captions, and text wrap are untouched. The
+// shared overlay styles above apply; only interaction blocking and the
+// no-backdrop-filter fallback need figure-specific rules.
+.nuxx-spoiler--media {
+	&:not(.is-revealed)
+		> :not(.nuxx-spoiler__overlay):not(.nuxx-spoiler__rehide) {
+		pointer-events: none;
+		user-select: none;
+		-webkit-user-select: none;
+	}
+
+	@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+		&:not(.is-revealed) {
+			overflow: hidden;
+
+			img {
+				filter: blur(24px);
+			}
+		}
+	}
+}
+
 // Inline spoiler: a solid bar over the text. Themes can override the
 // bar color via --nuxx-spoiler-bar. .wp-spoiler-inline is the legacy
 // class stored in content by pre-1.4 versions.

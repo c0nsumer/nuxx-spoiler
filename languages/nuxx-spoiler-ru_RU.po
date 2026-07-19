@@ -13,6 +13,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: nuxx-spoiler.php
 #: build/spoiler-block/render.php:20
+#: nuxx-spoiler.php:100
 #: build/spoiler-block/index.js:1
 msgid "Spoiler"
 msgstr "Спойлер"
@@ -39,11 +40,13 @@ msgstr ""
 
 #. translators: %s: warning label, e.g. "NSFW".
 #: build/spoiler-block/render.php:37
+#: nuxx-spoiler.php:124
 #, php-format
 msgid "Show hidden content: %s"
 msgstr "Показать скрытое содержимое: %s"
 
 #: build/spoiler-block/render.php:40
+#: nuxx-spoiler.php:126
 #: build/spoiler-block/index.js:1
 msgid "Click to show"
 msgstr "Нажмите, чтобы показать"
@@ -73,6 +76,22 @@ msgid "Nudity"
 msgstr "Обнажённое тело"
 
 #: build/spoiler-block/index.js:1
+msgid "Label"
+msgstr "Метка"
+
+#: build/spoiler-block/index.js:1
+msgid "Shown on the overlay so visitors know why the content is hidden."
+msgstr "Отображается на накладке, чтобы посетители знали, почему содержимое скрыто."
+
+#: build/spoiler-block/index.js:1
+msgid "Hide behind a spoiler"
+msgstr "Скрыть за спойлером"
+
+#: build/spoiler-block/index.js:1
+msgid "Blur the image in place until a visitor clicks to show it."
+msgstr "Размывает изображение на месте, пока посетитель не нажмёт, чтобы показать его."
+
+#: build/spoiler-block/index.js:1
 msgid "Show content"
 msgstr "Показать содержимое"
 
@@ -83,14 +102,6 @@ msgstr "Предпросмотр скрытого состояния"
 #: build/spoiler-block/index.js:1
 msgid "Warning label"
 msgstr "Метка предупреждения"
-
-#: build/spoiler-block/index.js:1
-msgid "Label"
-msgstr "Метка"
-
-#: build/spoiler-block/index.js:1
-msgid "Shown on the overlay so visitors know why the content is hidden."
-msgstr "Отображается на накладке, чтобы посетители знали, почему содержимое скрыто."
 
 #: build/spoiler-block/view.js:1
 msgid "Hide again"

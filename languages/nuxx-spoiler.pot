@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-19T14:25:18+00:00\n"
+"POT-Creation-Date: 2026-07-19T14:39:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: nuxx-spoiler\n"
@@ -17,6 +17,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: nuxx-spoiler.php
 #: build/spoiler-block/render.php:20
+#: nuxx-spoiler.php:100
 #: build/spoiler-block/index.js:1
 msgid "Spoiler"
 msgstr ""
@@ -43,11 +44,13 @@ msgstr ""
 
 #. translators: %s: warning label, e.g. "NSFW".
 #: build/spoiler-block/render.php:37
+#: nuxx-spoiler.php:124
 #, php-format
 msgid "Show hidden content: %s"
 msgstr ""
 
 #: build/spoiler-block/render.php:40
+#: nuxx-spoiler.php:126
 #: build/spoiler-block/index.js:1
 msgid "Click to show"
 msgstr ""
@@ -77,6 +80,22 @@ msgid "Nudity"
 msgstr ""
 
 #: build/spoiler-block/index.js:1
+msgid "Label"
+msgstr ""
+
+#: build/spoiler-block/index.js:1
+msgid "Shown on the overlay so visitors know why the content is hidden."
+msgstr ""
+
+#: build/spoiler-block/index.js:1
+msgid "Hide behind a spoiler"
+msgstr ""
+
+#: build/spoiler-block/index.js:1
+msgid "Blur the image in place until a visitor clicks to show it."
+msgstr ""
+
+#: build/spoiler-block/index.js:1
 msgid "Show content"
 msgstr ""
 
@@ -86,14 +105,6 @@ msgstr ""
 
 #: build/spoiler-block/index.js:1
 msgid "Warning label"
-msgstr ""
-
-#: build/spoiler-block/index.js:1
-msgid "Label"
-msgstr ""
-
-#: build/spoiler-block/index.js:1
-msgid "Shown on the overlay so visitors know why the content is hidden."
 msgstr ""
 
 #: build/spoiler-block/view.js:1

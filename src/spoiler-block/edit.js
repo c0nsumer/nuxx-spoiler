@@ -9,26 +9,13 @@ import {
 	useBlockProps,
 	useInnerBlocksProps,
 } from '@wordpress/block-editor';
-import {
-	Button,
-	Flex,
-	FlexItem,
-	PanelBody,
-	TextControl,
-	ToolbarButton,
-	ToolbarGroup,
-} from '@wordpress/components';
+import { PanelBody, ToolbarButton, ToolbarGroup } from '@wordpress/components';
 import { seen, unseen } from '@wordpress/icons';
 
-const PRESET_LABELS = [
-	__( 'Spoiler', 'nuxx-spoiler' ),
-	__( 'NSFW', 'nuxx-spoiler' ),
-	__( 'Medical image', 'nuxx-spoiler' ),
-	__( 'Content warning', 'nuxx-spoiler' ),
-	__( 'Graphic content', 'nuxx-spoiler' ),
-	__( 'Flashing lights', 'nuxx-spoiler' ),
-	__( 'Nudity', 'nuxx-spoiler' ),
-];
+/**
+ * Internal dependencies
+ */
+import { LabelControls } from '../label-controls';
 
 export default function Edit( { attributes, setAttributes } ) {
 	const { label } = attributes;
@@ -67,39 +54,12 @@ export default function Edit( { attributes, setAttributes } ) {
 			</BlockControls>
 			<InspectorControls>
 				<PanelBody title={ __( 'Warning label', 'nuxx-spoiler' ) }>
-					<TextControl
-						__next40pxDefaultSize
-						__nextHasNoMarginBottom
-						label={ __( 'Label', 'nuxx-spoiler' ) }
-						help={ __(
-							'Shown on the overlay so visitors know why the content is hidden.',
-							'nuxx-spoiler'
-						) }
-						placeholder={ __( 'Spoiler', 'nuxx-spoiler' ) }
+					<LabelControls
 						value={ label }
 						onChange={ ( value ) =>
 							setAttributes( { label: value } )
 						}
 					/>
-					<Flex wrap gap={ 2 } justify="flex-start">
-						{ PRESET_LABELS.map( ( preset ) => (
-							<FlexItem key={ preset }>
-								<Button
-									size="small"
-									variant={
-										label === preset
-											? 'primary'
-											: 'secondary'
-									}
-									onClick={ () =>
-										setAttributes( { label: preset } )
-									}
-								>
-									{ preset }
-								</Button>
-							</FlexItem>
-						) ) }
-					</Flex>
 				</PanelBody>
 			</InspectorControls>
 			<div { ...blockProps }>

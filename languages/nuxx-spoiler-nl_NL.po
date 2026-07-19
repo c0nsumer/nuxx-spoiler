@@ -13,6 +13,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: nuxx-spoiler.php
 #: build/spoiler-block/render.php:20
+#: nuxx-spoiler.php:100
 #: build/spoiler-block/index.js:1
 msgid "Spoiler"
 msgstr "Spoiler"
@@ -39,11 +40,13 @@ msgstr ""
 
 #. translators: %s: warning label, e.g. "NSFW".
 #: build/spoiler-block/render.php:37
+#: nuxx-spoiler.php:124
 #, php-format
 msgid "Show hidden content: %s"
 msgstr "Verborgen inhoud tonen: %s"
 
 #: build/spoiler-block/render.php:40
+#: nuxx-spoiler.php:126
 #: build/spoiler-block/index.js:1
 msgid "Click to show"
 msgstr "Klik om te tonen"
@@ -73,6 +76,22 @@ msgid "Nudity"
 msgstr "Naaktheid"
 
 #: build/spoiler-block/index.js:1
+msgid "Label"
+msgstr "Label"
+
+#: build/spoiler-block/index.js:1
+msgid "Shown on the overlay so visitors know why the content is hidden."
+msgstr "Wordt op de overlay getoond zodat bezoekers weten waarom de inhoud verborgen is."
+
+#: build/spoiler-block/index.js:1
+msgid "Hide behind a spoiler"
+msgstr "Achter een spoiler verbergen"
+
+#: build/spoiler-block/index.js:1
+msgid "Blur the image in place until a visitor clicks to show it."
+msgstr "Vervaagt de afbeelding op haar plek totdat een bezoeker klikt om deze te tonen."
+
+#: build/spoiler-block/index.js:1
 msgid "Show content"
 msgstr "Inhoud tonen"
 
@@ -83,14 +102,6 @@ msgstr "Voorbeeld van verborgen staat"
 #: build/spoiler-block/index.js:1
 msgid "Warning label"
 msgstr "Waarschuwingslabel"
-
-#: build/spoiler-block/index.js:1
-msgid "Label"
-msgstr "Label"
-
-#: build/spoiler-block/index.js:1
-msgid "Shown on the overlay so visitors know why the content is hidden."
-msgstr "Wordt op de overlay getoond zodat bezoekers weten waarom de inhoud verborgen is."
 
 #: build/spoiler-block/view.js:1
 msgid "Hide again"

@@ -13,6 +13,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: nuxx-spoiler.php
 #: build/spoiler-block/render.php:20
+#: nuxx-spoiler.php:100
 #: build/spoiler-block/index.js:1
 msgid "Spoiler"
 msgstr "剧透"
@@ -39,11 +40,13 @@ msgstr ""
 
 #. translators: %s: warning label, e.g. "NSFW".
 #: build/spoiler-block/render.php:37
+#: nuxx-spoiler.php:124
 #, php-format
 msgid "Show hidden content: %s"
 msgstr "显示隐藏内容：%s"
 
 #: build/spoiler-block/render.php:40
+#: nuxx-spoiler.php:126
 #: build/spoiler-block/index.js:1
 msgid "Click to show"
 msgstr "点击显示"
@@ -73,6 +76,22 @@ msgid "Nudity"
 msgstr "裸露内容"
 
 #: build/spoiler-block/index.js:1
+msgid "Label"
+msgstr "标签"
+
+#: build/spoiler-block/index.js:1
+msgid "Shown on the overlay so visitors know why the content is hidden."
+msgstr "显示在遮罩上，让访客知道内容被隐藏的原因。"
+
+#: build/spoiler-block/index.js:1
+msgid "Hide behind a spoiler"
+msgstr "隐藏为剧透"
+
+#: build/spoiler-block/index.js:1
+msgid "Blur the image in place until a visitor clicks to show it."
+msgstr "将图片就地模糊，直到访客点击显示。"
+
+#: build/spoiler-block/index.js:1
 msgid "Show content"
 msgstr "显示内容"
 
@@ -83,14 +102,6 @@ msgstr "预览隐藏状态"
 #: build/spoiler-block/index.js:1
 msgid "Warning label"
 msgstr "警告标签"
-
-#: build/spoiler-block/index.js:1
-msgid "Label"
-msgstr "标签"
-
-#: build/spoiler-block/index.js:1
-msgid "Shown on the overlay so visitors know why the content is hidden."
-msgstr "显示在遮罩上，让访客知道内容被隐藏的原因。"
 
 #: build/spoiler-block/view.js:1
 msgid "Hide again"

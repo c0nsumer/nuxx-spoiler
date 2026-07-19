@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.8.0
+Stable tag: 1.9.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,14 +14,15 @@ Blur images and obscure text behind a click-to-reveal content warning.
 
 Hide content a reader should opt into seeing — spoilers, NSFW material, medical images — behind a blur with a warning label. One click reveals it; a small button hides it again.
 
-Two mechanisms:
+Three mechanisms:
 
 * **Spoiler block** — wraps any blocks (images, galleries, paragraphs, embeds) and blurs them under an overlay with a warning pill. Label presets (Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity) plus free text.
+* **Image spoiler toggle** — a "Hide behind a spoiler" setting on every Image block that blurs the image exactly where it sits, leaving floats, captions, and text wrap untouched.
 * **Inline spoiler format** — obscures a word or phrase mid-sentence with a solid bar.
 
 Editor integration: block inserter entry, "Turn into Spoiler" transform for existing blocks (Ungroup transforms back), and an inline-format toolbar button.
 
-Accessibility: the overlay is a real button, and the block's hidden content is inert and aria-hidden until revealed so screen readers, tab order, and find-in-page cannot reach it. The block fails closed without JavaScript — its markup ships in the hidden state. The inline format's bar is drawn with CSS that always loads; without JavaScript it stays visually obscured but remains readable to screen readers and find-in-page, since its ARIA state is applied at runtime.
+Accessibility: the overlay is a real button, and hidden content is inert and aria-hidden until revealed so screen readers, tab order, and find-in-page cannot reach it. The block and the image toggle fail closed without JavaScript — their markup ships in the hidden state. The inline format's bar is drawn with CSS that always loads; without JavaScript it stays visually obscured but remains readable to screen readers and find-in-page, since its ARIA state is applied at runtime.
 
 Note: this is courtesy hiding, not security. Content is present in the page HTML and appears un-hidden in RSS feeds.
 
@@ -40,6 +41,9 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
+
+= 1.9.0 =
+* New: every Image block has a "Hide behind a spoiler" setting (in the block's Settings tab) that blurs the image in place. Floated and aligned images keep their exact position, captions, and text wrap — use this instead of the Spoiler block for images in flowing text. The hidden state is server-rendered, so it fails closed without JavaScript.
 
 = 1.8.0 =
 * Front-end style and script now always load, so inline spoilers in synced patterns, template parts, and widgets are reliably hidden. (Previously a content scan could miss them, leaving hidden text visible.)

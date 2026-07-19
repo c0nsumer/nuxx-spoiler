@@ -8,6 +8,7 @@ Spoilers for WordPress: blur images and obscure text behind a click-to-reveal co
 ## Features
 
 - **Spoiler block** — wrap any content (images, galleries, paragraphs, embeds) in a container that blurs it under a translucent overlay with a warning pill. One click reveals it; a small corner button hides it again. State resets on page reload.
+- **Image spoiler toggle** — every Image block gets a "Hide behind a spoiler" setting that blurs the image exactly where it sits: floats, captions, sizing, and text wrap are untouched. Use this for images in flowing text; the Spoiler block suits multi-block content.
 - **Inline spoiler text format** — obscure a word or phrase mid-sentence with a solid bar. Click (or focus + Enter/Space) toggles it.
 - **Warning label presets** — Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity — plus a free-text field, per block.
 - **First-class editor integration**:
@@ -16,7 +17,7 @@ Spoilers for WordPress: blur images and obscure text behind a click-to-reveal co
   - Toolbar button for the inline format (under the ¶ formatting menu)
   - "Preview hidden state" toolbar toggle so you can see what visitors will see
 - **Accessibility-minded** — the overlay is a real button; the block's hidden content is `inert` and `aria-hidden` until revealed, so screen readers, tab order, and find-in-page can't leak it. Reveal/re-hide manage focus. `prefers-reduced-motion` is respected.
-- **The block fails closed without JavaScript** — its markup ships in the hidden state, so no JS means the content stays hidden. The inline format's bar is CSS-drawn and always loads, but without JavaScript the hidden text remains readable to screen readers and find-in-page (the ARIA state is applied at runtime).
+- **The block and the image toggle fail closed without JavaScript** — their markup ships in the hidden state, so no JS means the content stays hidden. The inline format's bar is CSS-drawn and always loads, but without JavaScript the hidden text remains readable to screen readers and find-in-page (the ARIA state is applied at runtime).
 
 ## Caveats
 

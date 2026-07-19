@@ -11,6 +11,7 @@ import Edit from './edit';
 import save from './save';
 import metadata from './block.json';
 import '../inline-format';
+import '../image-extension';
 import './style.scss';
 import './editor.scss';
 

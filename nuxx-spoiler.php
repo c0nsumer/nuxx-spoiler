@@ -3,7 +3,7 @@
  * Plugin Name:       Spoiler
  * Plugin URI:        https://github.com/c0nsumer/nuxx-spoiler
  * Description:       Blur images and obscure text behind a click-to-reveal content warning. Adds a Spoiler block and an inline spoiler text format to the block editor.
- * Version:           1.8.0
+ * Version:           1.9.0
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Steve Vigneau
@@ -71,3 +71,64 @@ function nuxx_spoiler_enqueue_front_end_assets() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'nuxx_spoiler_enqueue_front_end_assets' );
+
+/**
+ * Image-block spoiler toggle: when an Image block has the nuxxSpoiler
+ * attribute (set in the editor by src/image-extension), transform its
+ * figure in place — the figure stays the layout element, so floats,
+ * captions, and text wrap are unaffected. The hidden state (inert,
+ * aria-hidden, overlay) is server-rendered so it fails closed without
+ * JavaScript, like the Spoiler block.
+ *
+ * @param string $block_content Rendered block HTML.
+ * @param array  $block         Parsed block, including attrs.
+ * @return string Filtered block HTML.
+ */
+function nuxx_spoiler_filter_image_block( $block_content, $block ) {
+	if ( empty( $block['attrs']['nuxxSpoiler'] ) ) {
+		return $block_content;
+	}
+
+	$figure_end = strrpos( $block_content, '</figure>' );
+
+	if ( false === $figure_end ) {
+		return $block_content;
+	}
+
+	$label = ! empty( $block['attrs']['nuxxSpoilerLabel'] )
+		? $block['attrs']['nuxxSpoilerLabel']
+		: __( 'Spoiler', 'nuxx-spoiler' );
+
+	$processor = new WP_HTML_Tag_Processor( $block_content );
+
+	if ( ! $processor->next_tag( 'figure' ) ) {
+		return $block_content;
+	}
+
+	$processor->add_class( 'nuxx-spoiler' );
+	$processor->add_class( 'nuxx-spoiler--media' );
+
+	// Hide the figure's content from assistive tech and interaction
+	// until revealed; view.js lifts these on reveal.
+	while ( $processor->next_tag() ) {
+		if ( in_array( $processor->get_tag(), array( 'A', 'IMG', 'FIGCAPTION' ), true ) ) {
+			$processor->set_attribute( 'inert', true );
+			$processor->set_attribute( 'aria-hidden', 'true' );
+		}
+	}
+
+	$html = $processor->get_updated_html();
+
+	$overlay = sprintf(
+		'<button type="button" class="nuxx-spoiler__overlay" aria-expanded="false" aria-label="%s"><span class="nuxx-spoiler__pill">%s</span><span class="nuxx-spoiler__hint">%s</span></button>',
+		esc_attr( sprintf( /* translators: %s: warning label, e.g. "NSFW". */ __( 'Show hidden content: %s', 'nuxx-spoiler' ), $label ) ),
+		esc_html( $label ),
+		esc_html__( 'Click to show', 'nuxx-spoiler' )
+	);
+
+	// Re-locate the closing tag: attribute edits changed offsets.
+	$figure_end = strrpos( $html, '</figure>' );
+
+	return substr_replace( $html, $overlay, $figure_end, 0 );
+}
+add_filter( 'render_block_core/image', 'nuxx_spoiler_filter_image_block', 10, 2 );
