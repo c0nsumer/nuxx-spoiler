@@ -8,6 +8,10 @@
 	border: 1.5px dashed rgba(120, 120, 120, 0.6);
 	overflow: visible;
 
+	// Full width while authoring so the box doesn't resize as you type;
+	// the front end shrink-wraps (see style.scss).
+	width: auto;
+
 	// Keep content readable while authoring.
 	&:not(.is-preview-hidden) > .nuxx-spoiler__content {
 		filter: none;

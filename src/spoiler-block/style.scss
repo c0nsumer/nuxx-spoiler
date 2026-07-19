@@ -7,6 +7,14 @@
 .nuxx-spoiler {
 	position: relative;
 
+	// Shrink-wrap the content horizontally so the scrim, blur, and
+	// re-hide button hug the actual content (e.g. an image narrower than
+	// the column) rather than the full column width. Long text still
+	// fills the available width; use the block's own alignment controls
+	// to position a shrunk spoiler.
+	width: fit-content;
+	max-width: 100%;
+
 	// Hug the content: contain inner margins (flow-root) and trim the
 	// outermost ones so the wrapper's edges — which the overlay and the
 	// re-hide button anchor to — coincide with the visible content.
