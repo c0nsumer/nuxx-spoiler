@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.10.0
+Stable tag: 1.11.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ Hide content a reader should opt into seeing — spoilers, NSFW material, medica
 Three mechanisms:
 
 * **Spoiler block** — wraps any blocks (images, galleries, paragraphs, embeds) and blurs them under an overlay with a warning pill. Label presets (Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity) plus free text.
-* **Image spoiler toggle** — a "Hide behind a spoiler" setting on every Image block that blurs the image exactly where it sits, leaving floats, captions, and text wrap untouched.
+* **Image spoiler toggle** — a "Hide behind a spoiler" setting on every Image block that blurs the image exactly where it sits, leaving floats, captions, and text wrap untouched. The blur covers the image only; captions stay visible (use the Spoiler block if a caption itself must be hidden).
 * **Inline spoiler format** — obscures a word or phrase mid-sentence with a solid bar.
 
 Editor integration: block inserter entry, "Turn into Spoiler" transform for existing blocks (Ungroup transforms back), and an inline-format toolbar button.
@@ -41,6 +41,10 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
+
+= 1.11.0 =
+* The image spoiler's blur and re-hide button now hug the image itself rather than the figure, fixing unaligned images narrower than the content column (the blur previously spanned the full column with the button at the column's corner).
+* Captions on spoiled images are no longer covered by the blur; they stay visible and readable in both states. Use the Spoiler block when a caption itself must be hidden.
 
 = 1.10.0 =
 * "Turn into Spoiler" is no longer offered for a lone Image block — use the image's own "Hide behind a spoiler" setting instead, which blurs the image in place without breaking text flow. Multi-block selections (including images) still wrap in a Spoiler block as before.

@@ -28,17 +28,22 @@ function setBlockHidden( root, contents, overlay, hidden ) {
 }
 
 function initBlockSpoiler( root ) {
-	const overlay = root.querySelector( ':scope > .nuxx-spoiler__overlay' );
+	// The Spoiler block hosts its overlay directly; the image-block
+	// variant (.nuxx-spoiler--media) hosts it in the .nuxx-spoiler__media
+	// wrapper around the image, so the overlay and re-hide button hug
+	// the image rather than the (possibly wider) figure.
+	const isMedia = root.classList.contains( 'nuxx-spoiler--media' );
+	const host = isMedia
+		? root.querySelector( '.nuxx-spoiler__media' )
+		: root;
+	const overlay = host?.querySelector( ':scope > .nuxx-spoiler__overlay' );
 
 	if ( ! overlay ) {
 		return;
 	}
 
-	// The Spoiler block wraps its content in a single container div; the
-	// image-block variant (.nuxx-spoiler--media) is the figure itself, so
-	// its hidden elements are the figure's own children.
-	const contents = root.classList.contains( 'nuxx-spoiler--media' )
-		? [ ...root.children ].filter(
+	const contents = isMedia
+		? [ ...host.children ].filter(
 				( el ) =>
 					! el.classList.contains( 'nuxx-spoiler__overlay' ) &&
 					! el.classList.contains( 'nuxx-spoiler__rehide' )
@@ -60,7 +65,7 @@ function initBlockSpoiler( root ) {
 		__( 'Hide content again', 'nuxx-spoiler' )
 	);
 	rehide.innerHTML = EYE_OFF_SVG;
-	root.appendChild( rehide );
+	host.appendChild( rehide );
 
 	overlay.addEventListener( 'click', () => {
 		setBlockHidden( root, contents, overlay, false );

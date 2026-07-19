@@ -1,6 +1,6 @@
 {
 	"name": "nuxx-spoiler",
-	"version": "1.10.0",
+	"version": "1.11.0",
 	"description": "Spoilers for WordPress: blur images and obscure text behind a click-to-reveal content warning.",
 	"author": "Steve Vigneau <steve@nuxx.net> (https://nuxx.net)",
 	"license": "GPL-2.0-or-later",

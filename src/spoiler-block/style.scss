@@ -152,12 +152,21 @@
 	}
 }
 
-// Image-block spoiler (.nuxx-spoiler--media): the figure itself is the
-// spoiler root, so floats, captions, and text wrap are untouched. The
-// shared overlay styles above apply; only interaction blocking and the
-// no-backdrop-filter fallback need figure-specific rules.
+// Image-block spoiler (.nuxx-spoiler--media): the figure is the spoiler
+// root, but the overlay and re-hide button live in an inline wrapper
+// around the (optionally linked) image itself, so the blur hugs the
+// image exactly even when the figure is wider (unaligned images) —
+// floats, captions, and text wrap are untouched, and captions stay
+// visible outside the blur.
+.nuxx-spoiler__media {
+	position: relative;
+	display: inline-block;
+	max-width: 100%;
+}
+
 .nuxx-spoiler--media {
 	&:not(.is-revealed)
+		.nuxx-spoiler__media
 		> :not(.nuxx-spoiler__overlay):not(.nuxx-spoiler__rehide) {
 		pointer-events: none;
 		user-select: none;
@@ -165,7 +174,7 @@
 	}
 
 	@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-		&:not(.is-revealed) {
+		&:not(.is-revealed) .nuxx-spoiler__media {
 			overflow: hidden;
 
 			img {
