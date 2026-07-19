@@ -51,7 +51,7 @@ add_action( 'init', 'nuxx_spoiler_init' );
 /**
  * The block's assets load automatically where the block appears, but the
  * inline spoiler format can occur in any rendered content (posts, synced
- * patterns, template parts, widgets) and its hiding is CSS-based — if the
+ * patterns, template parts, widgets) and its hiding is CSS-based - if the
  * stylesheet is missing, hidden text displays in the clear. Always load
  * the small front-end style and view script so the format fails closed.
  */
@@ -75,7 +75,7 @@ add_action( 'wp_enqueue_scripts', 'nuxx_spoiler_enqueue_front_end_assets' );
 /**
  * Image-block spoiler toggle: when an Image block has the nuxxSpoiler
  * attribute (set in the editor by src/image-extension), transform its
- * figure in place — the figure stays the layout element, so floats,
+ * figure in place - the figure stays the layout element, so floats,
  * captions, and text wrap are unaffected. The hidden state (inert,
  * aria-hidden, overlay) is server-rendered so it fails closed without
  * JavaScript, like the Spoiler block.

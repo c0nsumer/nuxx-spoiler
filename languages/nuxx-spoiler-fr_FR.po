@@ -116,8 +116,8 @@ msgid "Hidden text; activate to reveal"
 msgstr "Texte masqué ; activez pour l'afficher"
 
 #: build/spoiler-block/view.js:1
-msgid "Hidden text — click to show"
-msgstr "Texte masqué – cliquez pour afficher"
+msgid "Hidden text; click to show"
+msgstr "Texte masqué : cliquez pour afficher"
 
 #: build/spoiler-block/block.json
 msgctxt "block title"

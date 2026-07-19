@@ -27,7 +27,7 @@
 
 	// While hidden, the content itself stays unstyled (the overlay's
 	// backdrop-filter does the blurring) so revealing restores the exact
-	// original rendering — no scaling, clipping, or rounded corners.
+	// original rendering - no scaling, clipping, or rounded corners.
 	&:not(.is-revealed) > .nuxx-spoiler__content {
 		pointer-events: none;
 		user-select: none;
@@ -155,7 +155,7 @@
 // Image-block spoiler (.nuxx-spoiler--media): the figure is the spoiler
 // root, but the overlay and re-hide button live in an inline wrapper
 // around the (optionally linked) image itself, so the blur hugs the
-// image exactly even when the figure is wider (unaligned images) —
+// image exactly even when the figure is wider (unaligned images) -
 // floats, captions, and text wrap are untouched, and captions stay
 // visible outside the blur.
 .nuxx-spoiler__media {

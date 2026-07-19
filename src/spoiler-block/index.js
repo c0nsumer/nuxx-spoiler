@@ -31,7 +31,7 @@ registerBlockType( metadata.name, {
 					}
 
 					// Don't offer wrapping for a lone Spoiler block, or
-					// for a lone Image block — images should use their
+					// for a lone Image block - images should use their
 					// own "Hide behind a spoiler" setting, which blurs
 					// in place without breaking text flow. (Transforms
 					// cannot redirect to a different block type, so the

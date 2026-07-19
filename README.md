@@ -7,17 +7,17 @@ Hide images, whole groups of blocks, or inline text behind a click-to-reveal con
 
 ## Features
 
-- **Spoiler block** — wrap any content (images, galleries, paragraphs, embeds) in a container that blurs it under a translucent overlay with a warning pill. One click reveals it; a small corner button hides it again. State resets on page reload.
-- **Image spoiler toggle** — every Image block gets a "Hide behind a spoiler" setting that blurs the image exactly where it sits: floats, captions, sizing, and text wrap are untouched, and the blur hugs the image itself (captions stay visible; use the Spoiler block if a caption must be hidden too). Use this for images in flowing text; the Spoiler block suits multi-block content.
-- **Inline spoiler text format** — obscure a word or phrase mid-sentence with a solid bar. Click (or focus + Enter/Space) toggles it.
-- **Warning label presets** — Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity — plus a free-text field, per block.
+- **Spoiler block** - wrap any content (images, galleries, paragraphs, embeds) in a container that blurs it under a translucent overlay with a warning pill. One click reveals it; a small corner button hides it again. State resets on page reload.
+- **Image spoiler toggle** - every Image block gets a "Hide behind a spoiler" setting that blurs the image exactly where it sits: floats, captions, sizing, and text wrap are untouched, and the blur hugs the image itself (captions stay visible; use the Spoiler block if a caption must be hidden too). Use this for images in flowing text; the Spoiler block suits multi-block content.
+- **Inline spoiler text format** - obscure a word or phrase mid-sentence with a solid bar. Click (or focus + Enter/Space) toggles it.
+- **Warning label presets** - Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity - plus a free-text field, per block.
 - **First-class editor integration**:
   - Block inserter entry (search "spoiler", "nsfw", "hide", "blur"…)
-  - "Turn into Spoiler" — select any block(s) and transform them into a Spoiler; Ungroup (in the block's options menu) transforms back. A lone Image block is steered to its own spoiler setting instead, since wrapping a floated image would break text flow
+  - "Turn into Spoiler" - select any block(s) and transform them into a Spoiler; Ungroup (in the block's options menu) transforms back. A lone Image block is steered to its own spoiler setting instead, since wrapping a floated image would break text flow
   - Toolbar button for the inline format (under the ¶ formatting menu)
   - "Preview hidden state" toolbar toggle so you can see what visitors will see
-- **Accessibility-minded** — the overlay is a real button; the block's hidden content is `inert` and `aria-hidden` until revealed, so screen readers, tab order, and find-in-page can't leak it. Reveal/re-hide manage focus. `prefers-reduced-motion` is respected.
-- **The block and the image toggle fail closed without JavaScript** — their markup ships in the hidden state, so no JS means the content stays hidden. The inline format's bar is CSS-drawn and always loads, but without JavaScript the hidden text remains readable to screen readers and find-in-page (the ARIA state is applied at runtime).
+- **Accessibility-minded** - the overlay is a real button; the block's hidden content is `inert` and `aria-hidden` until revealed, so screen readers, tab order, and find-in-page can't leak it. Reveal/re-hide manage focus. `prefers-reduced-motion` is respected.
+- **The block and the image toggle fail closed without JavaScript** - their markup ships in the hidden state, so no JS means the content stays hidden. The inline format's bar is CSS-drawn and always loads, but without JavaScript the hidden text remains readable to screen readers and find-in-page (the ARIA state is applied at runtime).
 
 ## Caveats
 
@@ -42,7 +42,7 @@ npm run plugin-zip   # build an installable release zip
 
 ## Translations
 
-Translations for ten locales are bundled (`de_DE`, `es_ES`, `fr_FR`, `it_IT`, `nl_NL`, `pl_PL`, `pt_BR`, `ru_RU`, `ja`, `zh_CN`) and load automatically when a site uses one of those languages. They are machine translations (AI-generated) that have not been reviewed by native speakers — corrections are very welcome, either as edits to the `.po` files in `languages/` or to the source table in `tools/translations.json`.
+Translations for ten locales are bundled (`de_DE`, `es_ES`, `fr_FR`, `it_IT`, `nl_NL`, `pl_PL`, `pt_BR`, `ru_RU`, `ja`, `zh_CN`) and load automatically when a site uses one of those languages. They are machine translations (AI-generated) that have not been reviewed by native speakers - corrections are very welcome, either as edits to the `.po` files in `languages/` or to the source table in `tools/translations.json`.
 
 To regenerate after strings change (requires `wp-env` running):
 

@@ -1,7 +1,7 @@
 /**
  * Front-end behavior: reveal / re-hide for the Spoiler block and the inline
  * spoiler format. Markup ships in the hidden state (blur + inert), so
- * without JavaScript content stays hidden — this script only ever reveals.
+ * without JavaScript content stays hidden - this script only ever reveals.
  */
 
 /**
@@ -91,7 +91,7 @@ function initInlineSpoiler( span ) {
 	span.appendChild( inner );
 
 	const hiddenLabel = __( 'Hidden text; activate to reveal', 'nuxx-spoiler' );
-	const hoverHint = __( 'Hidden text — click to show', 'nuxx-spoiler' );
+	const hoverHint = __( 'Hidden text; click to show', 'nuxx-spoiler' );
 	span.setAttribute( 'role', 'button' );
 	span.setAttribute( 'tabindex', '0' );
 	span.setAttribute( 'aria-expanded', 'false' );

@@ -3,7 +3,7 @@
  * Image block's settings, following the same extension pattern core uses
  * for its own lightbox toggle. The front-end markup is produced by a
  * render_block filter in PHP, so the figure itself stays the layout
- * element — floats, captions, and text wrap are untouched.
+ * element - floats, captions, and text wrap are untouched.
  */
 
 /**
