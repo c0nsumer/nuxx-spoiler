@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.11.0
+Stable tag: 1.11.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
+
+= 1.11.1 =
+* Punctuation cleanup across documentation and UI text. The inline spoiler tooltip now reads "Hidden text; click to show" (all bundled translations updated). No functional changes.
 
 = 1.11.0 =
 * The image spoiler's blur and re-hide button now hug the image itself rather than the figure, fixing unaligned images narrower than the content column (the blur previously spanned the full column with the button at the column's corner).
