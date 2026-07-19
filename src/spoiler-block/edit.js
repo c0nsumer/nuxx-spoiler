@@ -107,7 +107,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							{ effectiveLabel }
 						</span>
 						<span className="wp-spoiler__hint">
-							{ __( 'Click to reveal', 'nuxx-spoiler' ) }
+							{ __( 'Click to show', 'nuxx-spoiler' ) }
 						</span>
 					</div>
 				) }

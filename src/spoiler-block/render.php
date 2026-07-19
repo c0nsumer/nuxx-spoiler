@@ -25,9 +25,9 @@ $nuxx_spoiler_label = ! empty( $attributes['label'] )
 		type="button"
 		class="wp-spoiler__overlay"
 		aria-expanded="false"
-		aria-label="<?php echo esc_attr( sprintf( /* translators: %s: warning label, e.g. "NSFW". */ __( 'Reveal hidden content: %s', 'nuxx-spoiler' ), $nuxx_spoiler_label ) ); ?>"
+		aria-label="<?php echo esc_attr( sprintf( /* translators: %s: warning label, e.g. "NSFW". */ __( 'Show hidden content: %s', 'nuxx-spoiler' ), $nuxx_spoiler_label ) ); ?>"
 	>
 		<span class="wp-spoiler__pill"><?php echo esc_html( $nuxx_spoiler_label ); ?></span>
-		<span class="wp-spoiler__hint"><?php esc_html_e( 'Click to reveal', 'nuxx-spoiler' ); ?></span>
+		<span class="wp-spoiler__hint"><?php esc_html_e( 'Click to show', 'nuxx-spoiler' ); ?></span>
 	</button>
 </div>
