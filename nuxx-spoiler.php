@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       Spoiler Alert!
+ * Plugin Name:       Spoiler
  * Plugin URI:        https://github.com/c0nsumer/nuxx-spoiler
  * Description:       Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.
- * Version:           1.12.0
+ * Version:           1.11.1
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Steve Vigneau

@@ -1,10 +1,10 @@
-=== Spoiler Alert! ===
+=== Spoiler ===
 Contributors: c0nsumer
 Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.12.0
+Stable tag: 1.11.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,9 +41,6 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
 
 == Changelog ==
-
-= 1.12.0 =
-* The plugin is now named "Spoiler Alert!". Slug, text domain, and block names are unchanged; existing installs update normally and content is unaffected.
 
 = 1.11.1 =
 * Punctuation cleanup across documentation and UI text. The inline spoiler tooltip now reads "Hidden text; click to show" (all bundled translations updated). No functional changes.

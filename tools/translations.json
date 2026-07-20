@@ -30,8 +30,7 @@
 		"Hide behind a spoiler": "Hinter einem Spoiler verbergen",
 		"Blur the image in place until a visitor clicks to show it.": "Das Bild an Ort und Stelle unscharf machen, bis ein Besucher es per Klick anzeigt.",
 		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Bilder, Blockgruppen oder Text im Fließtext hinter einer unscharfen, per Klick aufdeckbaren Inhaltswarnung verbergen. Fügt dem Block-Editor einen Spoiler-Block, eine Spoiler-Einstellung für Bilder und ein Inline-Spoiler-Textformat hinzu.",
-		"Hidden text; click to show": "Verborgener Text: zum Anzeigen klicken",
-		"Spoiler Alert!": "Spoiler Alert!"
+		"Hidden text; click to show": "Verborgener Text: zum Anzeigen klicken"
 	},
 	"es_ES": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -64,8 +63,7 @@
 		"Hide behind a spoiler": "Ocultar tras un spoiler",
 		"Blur the image in place until a visitor clicks to show it.": "Difumina la imagen en su sitio hasta que un visitante haga clic para mostrarla.",
 		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Oculta imágenes, grupos de bloques o texto en línea tras una advertencia de contenido difuminada que se revela al hacer clic. Añade al editor de bloques un bloque de spoiler, un ajuste de spoiler para imágenes y un formato de texto de spoiler en línea.",
-		"Hidden text; click to show": "Texto oculto: haz clic para mostrarlo",
-		"Spoiler Alert!": "Spoiler Alert!"
+		"Hidden text; click to show": "Texto oculto: haz clic para mostrarlo"
 	},
 	"fr_FR": {
 		"_plural": "nplurals=2; plural=n > 1;",
@@ -98,8 +96,7 @@
 		"Hide behind a spoiler": "Masquer derrière un spoiler",
 		"Blur the image in place until a visitor clicks to show it.": "Floute l'image sur place jusqu'à ce qu'un visiteur clique pour l'afficher.",
 		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Masquez des images, des groupes de blocs ou du texte en ligne derrière un avertissement de contenu flouté, révélé au clic. Ajoute à l'éditeur de blocs un bloc Spoiler, un réglage de spoiler pour les images et un format de texte spoiler en ligne.",
-		"Hidden text; click to show": "Texte masqué : cliquez pour afficher",
-		"Spoiler Alert!": "Spoiler Alert!"
+		"Hidden text; click to show": "Texte masqué : cliquez pour afficher"
 	},
 	"it_IT": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -132,8 +129,7 @@
 		"Hide behind a spoiler": "Nascondi dietro uno spoiler",
 		"Blur the image in place until a visitor clicks to show it.": "Sfoca l'immagine al suo posto finché un visitatore non fa clic per mostrarla.",
 		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Nascondi immagini, gruppi di blocchi o testo in linea dietro un avviso sui contenuti sfocato che si rivela con un clic. Aggiunge all'editor a blocchi un blocco Spoiler, un'impostazione spoiler per le immagini e un formato di testo spoiler in linea.",
-		"Hidden text; click to show": "Testo nascosto: fai clic per mostrarlo",
-		"Spoiler Alert!": "Spoiler Alert!"
+		"Hidden text; click to show": "Testo nascosto: fai clic per mostrarlo"
 	},
 	"nl_NL": {
 		"_plural": "nplurals=2; plural=n != 1;",
@@ -166,8 +162,7 @@
 		"Hide behind a spoiler": "Achter een spoiler verbergen",
 		"Blur the image in place until a visitor clicks to show it.": "Vervaagt de afbeelding op haar plek totdat een bezoeker klikt om deze te tonen.",
 		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Verberg afbeeldingen, groepen blokken of inline tekst achter een vervaagde inhoudswaarschuwing die met een klik wordt onthuld. Voegt aan de blok-editor een spoilerblok, een spoilerinstelling voor afbeeldingen en een inline spoiler-tekstformaat toe.",
-		"Hidden text; click to show": "Verborgen tekst: klik om te tonen",
-		"Spoiler Alert!": "Spoiler Alert!"
+		"Hidden text; click to show": "Verborgen tekst: klik om te tonen"
 	},
 	"pl_PL": {
 		"_plural": "nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);",
@@ -200,8 +195,7 @@
 		"Hide behind a spoiler": "Ukryj za spoilerem",
 		"Blur the image in place until a visitor clicks to show it.": "Rozmywa obraz w miejscu, dopóki odwiedzający nie kliknie, aby go pokazać.",
 		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Ukryj obrazy, grupy bloków lub tekst w wierszu za rozmytym ostrzeżeniem o treści, odsłanianym kliknięciem. Dodaje do edytora bloków blok spoilera, ustawienie spoilera dla obrazów oraz format tekstu spoilera w wierszu.",
-		"Hidden text; click to show": "Ukryty tekst: kliknij, aby pokazać",
-		"Spoiler Alert!": "Spoiler Alert!"
+		"Hidden text; click to show": "Ukryty tekst: kliknij, aby pokazać"
 	},
 	"pt_BR": {
 		"_plural": "nplurals=2; plural=n > 1;",
@@ -234,8 +228,7 @@
 		"Hide behind a spoiler": "Ocultar atrás de um spoiler",
 		"Blur the image in place until a visitor clicks to show it.": "Desfoca a imagem no lugar até que um visitante clique para mostrá-la.",
 		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Oculte imagens, grupos de blocos ou texto em linha atrás de um aviso de conteúdo desfocado, revelado com um clique. Adiciona ao editor de blocos um bloco de spoiler, uma configuração de spoiler para imagens e um formato de texto de spoiler em linha.",
-		"Hidden text; click to show": "Texto oculto: clique para mostrar",
-		"Spoiler Alert!": "Spoiler Alert!"
+		"Hidden text; click to show": "Texto oculto: clique para mostrar"
 	},
 	"ru_RU": {
 		"_plural": "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);",
@@ -268,8 +261,7 @@
 		"Hide behind a spoiler": "Скрыть за спойлером",
 		"Blur the image in place until a visitor clicks to show it.": "Размывает изображение на месте, пока посетитель не нажмёт, чтобы показать его.",
 		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "Скрывайте изображения, группы блоков или текст в строке за размытым предупреждением, раскрываемым по щелчку. Добавляет в редактор блоков блок «Спойлер», настройку спойлера для изображений и встроенный текстовый формат спойлера.",
-		"Hidden text; click to show": "Скрытый текст: нажмите, чтобы показать",
-		"Spoiler Alert!": "Spoiler Alert!"
+		"Hidden text; click to show": "Скрытый текст: нажмите, чтобы показать"
 	},
 	"ja": {
 		"_plural": "nplurals=1; plural=0;",
@@ -302,8 +294,7 @@
 		"Hide behind a spoiler": "ネタバレとして隠す",
 		"Blur the image in place until a visitor clicks to show it.": "訪問者がクリックして表示するまで、画像をその場でぼかします。",
 		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "画像、ブロックのグループ、行内のテキストをぼかしとクリックで表示できるコンテンツ警告の後ろに隠します。ブロックエディターにネタバレブロック、画像のネタバレ設定、インラインのネタバレ書式を追加します。",
-		"Hidden text; click to show": "非表示のテキスト。クリックして表示",
-		"Spoiler Alert!": "Spoiler Alert!"
+		"Hidden text; click to show": "非表示のテキスト。クリックして表示"
 	},
 	"zh_CN": {
 		"_plural": "nplurals=1; plural=0;",
@@ -336,7 +327,6 @@
 		"Hide behind a spoiler": "隐藏为剧透",
 		"Blur the image in place until a visitor clicks to show it.": "将图片就地模糊，直到访客点击显示。",
 		"Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.": "将图片、区块组或行内文字隐藏在模糊的点击显示内容警告后面。为区块编辑器添加剧透区块、图片剧透设置和行内剧透文字格式。",
-		"Hidden text; click to show": "隐藏的文字：点击显示",
-		"Spoiler Alert!": "Spoiler Alert!"
+		"Hidden text; click to show": "隐藏的文字：点击显示"
 	}
 }
