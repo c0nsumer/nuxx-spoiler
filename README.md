@@ -6,6 +6,10 @@ Hide images, whole groups of blocks, or inline text behind a click-to-reveal con
 
 *Static example image hidden by the Spoiler block: blurred, with a SPOILER pill and a Click to show hint overlaid.*
 
+## Read More
+
+Read more about this plugin and see examples of it in use [over here at nuxx.net](https://nuxx.net/blog/2026/07/20/nuxx-spoiler-the-wordpress-plugin/)
+
 
 ## Features
 
