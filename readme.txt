@@ -16,9 +16,9 @@ Hide content a reader should opt into seeing - spoilers, NSFW material, medical 
 
 Three mechanisms:
 
-* **Spoiler block** - wraps any blocks (images, galleries, paragraphs, embeds) and blurs them under an overlay with a warning pill. Label presets (Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity) plus free text.
-* **Image spoiler toggle** - a "Hide behind a spoiler" setting on every Image block that blurs the image exactly where it sits, leaving floats, captions, and text wrap untouched. The blur covers the image only; captions stay visible (use the Spoiler block if a caption itself must be hidden).
-* **Inline spoiler format** - obscures a word or phrase mid-sentence with a solid bar.
+* **Spoiler block**: Wraps any blocks (images, galleries, paragraphs, embeds) and blurs them under an overlay with a warning pill. Label presets (Spoiler, NSFW, Medical image, Content warning, Graphic content, Flashing lights, Nudity) plus free text.
+* **Image spoiler toggle**: A "Hide behind a spoiler" setting on every Image block that blurs the image exactly where it sits, leaving floats, captions, and text wrap untouched. The blur covers the image only; captions stay visible (use the Spoiler block if a caption itself must be hidden).
+* **Inline spoiler format**: Obscures a word or phrase mid-sentence with a solid bar.
 
 Editor integration: block inserter entry, "Turn into Spoiler" transform for existing blocks (Ungroup transforms back), and an inline-format toolbar button.
 
@@ -38,7 +38,7 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 
 = Is hidden content removed from the page source? =
 
-No. It ships blurred and inert but is present in the HTML and in RSS feeds. Do not use this for secrets.
+No. It ships blurred and inert but is present in the HTML and in RSS feeds. It is a courtesy tool, not a security tool.
 
 == Changelog ==
 
