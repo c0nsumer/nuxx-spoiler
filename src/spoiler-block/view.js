@@ -90,8 +90,8 @@ function initInlineSpoiler( span ) {
 	}
 	span.appendChild( inner );
 
-	const hiddenLabel = __( 'Hidden text; activate to reveal', 'nuxx-spoiler' );
-	const hoverHint = __( 'Hidden text; click to show', 'nuxx-spoiler' );
+	const hiddenLabel = __( 'Show hidden text', 'nuxx-spoiler' );
+	const hoverHint = __( 'Click to show hidden text', 'nuxx-spoiler' );
 	span.setAttribute( 'role', 'button' );
 	span.setAttribute( 'tabindex', '0' );
 	span.setAttribute( 'aria-expanded', 'false' );
