@@ -112,12 +112,12 @@ msgid "Hide content again"
 msgstr "重新隐藏内容"
 
 #: build/spoiler-block/view.js:1
-msgid "Hidden text; activate to reveal"
-msgstr "隐藏的文字；激活以显示"
+msgid "Show hidden text"
+msgstr "显示隐藏的文字"
 
 #: build/spoiler-block/view.js:1
-msgid "Hidden text; click to show"
-msgstr "隐藏的文字：点击显示"
+msgid "Click to show hidden text"
+msgstr "点击显示隐藏的文字"
 
 #: build/spoiler-block/block.json
 msgctxt "block title"

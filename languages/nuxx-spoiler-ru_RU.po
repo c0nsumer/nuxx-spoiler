@@ -112,12 +112,12 @@ msgid "Hide content again"
 msgstr "Снова скрыть содержимое"
 
 #: build/spoiler-block/view.js:1
-msgid "Hidden text; activate to reveal"
-msgstr "Скрытый текст; активируйте, чтобы показать"
+msgid "Show hidden text"
+msgstr "Показать скрытый текст"
 
 #: build/spoiler-block/view.js:1
-msgid "Hidden text; click to show"
-msgstr "Скрытый текст: нажмите, чтобы показать"
+msgid "Click to show hidden text"
+msgstr "Нажмите, чтобы показать скрытый текст"
 
 #: build/spoiler-block/block.json
 msgctxt "block title"

@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.11.1
+Stable tag: 1.12.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,60 +42,5 @@ No. It ships blurred and inert but is present in the HTML and in RSS feeds. It i
 
 == Changelog ==
 
-= 1.11.1 =
-* Punctuation cleanup across documentation and UI text. The inline spoiler tooltip now reads "Hidden text; click to show" (all bundled translations updated). No functional changes.
-
-= 1.11.0 =
-* The image spoiler's blur and re-hide button now hug the image itself rather than the figure, fixing unaligned images narrower than the content column (the blur previously spanned the full column with the button at the column's corner).
-* Captions on spoiled images are no longer covered by the blur; they stay visible and readable in both states. Use the Spoiler block when a caption itself must be hidden.
-
-= 1.10.0 =
-* "Turn into Spoiler" is no longer offered for a lone Image block - use the image's own "Hide behind a spoiler" setting instead, which blurs the image in place without breaking text flow. Multi-block selections (including images) still wrap in a Spoiler block as before.
-
-= 1.9.0 =
-* New: every Image block has a "Hide behind a spoiler" setting (in the block's Settings tab) that blurs the image in place. Floated and aligned images keep their exact position, captions, and text wrap - use this instead of the Spoiler block for images in flowing text. The hidden state is server-rendered, so it fails closed without JavaScript.
-
-= 1.8.0 =
-* Front-end style and script now always load, so inline spoilers in synced patterns, template parts, and widgets are reliably hidden. (Previously a content scan could miss them, leaving hidden text visible.)
-* Removed the keyboard shortcut: its editor-wide key handling could misfire while typing in text fields or wrap a block when an inline toggle was intended. Use the toolbar button and Ungroup instead.
-* The block's HTML anchor (Advanced panel) is now output on the front end, so fragment links to a spoiler work.
-* Hardened render.php against direct file access.
-* Documentation now accurately scopes the no-JavaScript guarantee: the block fails closed; the inline format stays visually obscured but is not hidden from assistive technology until JavaScript runs.
-
-= 1.7.0 =
-* Three new label presets: Graphic content, Flashing lights, Nudity (translated for all bundled locales).
-* Hovering hidden inline text now shows the browser's native tooltip ("Hidden text; click to show"); it disappears while the text is revealed.
-
-= 1.6.0 =
-* The spoiler wrapper now always spans the content area, like core's Group block. This replaces the shrink-wrap sizing from 1.4.1/1.5.2, which resolved percentage-based layouts (aligned figures, galleries, columns) against the wrong width on some themes. Content inside a spoiler now renders identically to the same content unwrapped, on any theme.
-
-= 1.5.2 =
-* Fixed left/right-aligned images rendering at half size inside a spoiler: core caps aligned figures at 50% of their container, which wrongly halved them against the spoiler's shrink-wrapped width.
-
-= 1.5.1 =
-* Removed the Unwrap toolbar button added in 1.5.0, keeping the block consistent with standard container blocks like Group. Use Ungroup in the block's options menu (or the keyboard shortcut) to turn a spoiler back into its contents.
-
-= 1.5.0 =
-* Added an Unwrap button to the Spoiler block's toolbar for turning a spoiler back into its contents in one click. (Ungroup in the options menu and the keyboard shortcut did this already, but were easy to miss.)
-
-= 1.4.1 =
-* The spoiler now shrink-wraps its content, so the blur, scrim, and re-hide button hug an image that is narrower than the content column instead of spanning the full column width. Use the block's alignment controls to position a shrunk spoiler.
-
-= 1.4.0 =
-* The plugin now uses the unique nuxx-spoiler slug throughout (install directory, text domain, CSS class prefix) in preparation for public distribution. Installs of earlier versions must delete the old plugin entry and install this version; content is unaffected.
-* The legacy wp-spoiler-inline class stored in older posts is still recognized.
-
-= 1.3.0 =
-* Bundled translations for ten locales: German, Spanish, French, Italian, Dutch, Polish, Brazilian Portuguese, Russian, Japanese, and Simplified Chinese. These are machine translations, not yet reviewed by native speakers; corrections welcome.
-
-= 1.2.0 =
-* Overlay hint now reads "Click to show".
-* Bundled-translation support: translations load from the plugin's languages/ directory, and a POT template is included for translators.
-
-= 1.1.0 =
-* Blur is now applied by the overlay (backdrop-filter), so hidden content is never scaled, clipped, or rounded and reveals exactly as authored.
-* The wrapper now hugs its content, keeping the re-hide button evenly inset in the corner regardless of theme margins.
-* Revealing fades the overlay out instead of removing it abruptly (disabled under reduced-motion preferences).
-
-= 1.0.0 =
-* Initial release: Spoiler block, inline spoiler format, label presets, keyboard shortcut, transforms.
+= 1.12.0 =
+* First production release.
