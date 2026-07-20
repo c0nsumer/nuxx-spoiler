@@ -12,11 +12,8 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: nuxx-spoiler.php
-#: build/spoiler-block/render.php:20
-#: nuxx-spoiler.php:101
-#: build/spoiler-block/index.js:1
-msgid "Spoiler"
-msgstr "剧透"
+msgid "Spoiler Alert!"
+msgstr "Spoiler Alert!"
 
 #. Plugin URI of the plugin
 #: nuxx-spoiler.php
@@ -37,6 +34,12 @@ msgstr ""
 #: nuxx-spoiler.php
 msgid "https://nuxx.net/"
 msgstr ""
+
+#: build/spoiler-block/render.php:20
+#: nuxx-spoiler.php:101
+#: build/spoiler-block/index.js:1
+msgid "Spoiler"
+msgstr "剧透"
 
 #. translators: %s: warning label, e.g. "NSFW".
 #: build/spoiler-block/render.php:37

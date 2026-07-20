@@ -1,4 +1,4 @@
-# Spoiler
+# Spoiler Alert!
 
 Hide images, whole groups of blocks, or inline text behind a click-to-reveal content warning: blurred images, blacked-out text. Useful for spoilers, NSFW content, medical images, or anything else a reader should opt into seeing.
 
