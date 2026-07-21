@@ -1,6 +1,6 @@
 {
 	"name": "nuxx-spoiler",
-	"version": "1.12.0",
+	"version": "1.12.1",
 	"description": "Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning in WordPress.",
 	"author": "Steve Vigneau <steve@nuxx.net> (https://nuxx.net)",
 	"license": "GPL-2.0-or-later",

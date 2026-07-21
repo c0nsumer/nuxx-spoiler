@@ -33,9 +33,7 @@ function initBlockSpoiler( root ) {
 	// wrapper around the image, so the overlay and re-hide button hug
 	// the image rather than the (possibly wider) figure.
 	const isMedia = root.classList.contains( 'nuxx-spoiler--media' );
-	const host = isMedia
-		? root.querySelector( '.nuxx-spoiler__media' )
-		: root;
+	const host = isMedia ? root.querySelector( '.nuxx-spoiler__media' ) : root;
 	const overlay = host?.querySelector( ':scope > .nuxx-spoiler__overlay' );
 
 	if ( ! overlay ) {
@@ -90,12 +88,18 @@ function initInlineSpoiler( span ) {
 	}
 	span.appendChild( inner );
 
-	const hiddenLabel = __( 'Show hidden text', 'nuxx-spoiler' );
+	// Name the control with visually hidden text instead of aria-label:
+	// the obscured text still renders (transparent), and an aria-label
+	// that differs from rendered text fails WCAG 2.5.3 (Label in Name).
+	const srLabel = document.createElement( 'span' );
+	srLabel.className = 'nuxx-spoiler-inline__label';
+	srLabel.textContent = __( 'Show hidden text', 'nuxx-spoiler' );
+	span.prepend( srLabel );
+
 	const hoverHint = __( 'Click to show hidden text', 'nuxx-spoiler' );
 	span.setAttribute( 'role', 'button' );
 	span.setAttribute( 'tabindex', '0' );
 	span.setAttribute( 'aria-expanded', 'false' );
-	span.setAttribute( 'aria-label', hiddenLabel );
 	span.setAttribute( 'title', hoverHint );
 
 	const toggle = () => {
@@ -105,11 +109,11 @@ function initInlineSpoiler( span ) {
 		if ( revealed ) {
 			inner.removeAttribute( 'aria-hidden' );
 			// Let the accessible name come from the now-visible text.
-			span.removeAttribute( 'aria-label' );
+			srLabel.setAttribute( 'aria-hidden', 'true' );
 			span.removeAttribute( 'title' );
 		} else {
 			inner.setAttribute( 'aria-hidden', 'true' );
-			span.setAttribute( 'aria-label', hiddenLabel );
+			srLabel.removeAttribute( 'aria-hidden' );
 			span.setAttribute( 'title', hoverHint );
 		}
 	};

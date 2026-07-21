@@ -3,7 +3,7 @@
  * Plugin Name:       Spoiler
  * Plugin URI:        https://github.com/c0nsumer/nuxx-spoiler
  * Description:       Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.
- * Version:           1.12.0
+ * Version:           1.12.1
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Steve Vigneau
@@ -111,9 +111,10 @@ function nuxx_spoiler_filter_image_block( $block_content, $block ) {
 		}
 	}
 
+	// The visible pill + hint text is the accessible name; an aria-label
+	// that differs from it fails WCAG 2.5.3 (Label in Name).
 	$overlay = sprintf(
-		'<button type="button" class="nuxx-spoiler__overlay" aria-expanded="false" aria-label="%s"><span class="nuxx-spoiler__pill">%s</span><span class="nuxx-spoiler__hint">%s</span></button>',
-		esc_attr( sprintf( /* translators: %s: warning label, e.g. "NSFW". */ __( 'Show hidden content: %s', 'nuxx-spoiler' ), $label ) ),
+		'<button type="button" class="nuxx-spoiler__overlay" aria-expanded="false"><span class="nuxx-spoiler__pill">%s</span><span class="nuxx-spoiler__hint">%s</span></button>',
 		esc_html( $label ),
 		esc_html__( 'Click to show', 'nuxx-spoiler' )
 	);

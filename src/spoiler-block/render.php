@@ -30,11 +30,11 @@ if ( ! empty( $attributes['anchor'] ) ) {
 	<div class="nuxx-spoiler__content" inert aria-hidden="true">
 		<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- inner blocks markup. ?>
 	</div>
+	<?php // The visible pill + hint text is the accessible name; an aria-label that differs from it fails WCAG 2.5.3 (Label in Name). ?>
 	<button
 		type="button"
 		class="nuxx-spoiler__overlay"
 		aria-expanded="false"
-		aria-label="<?php echo esc_attr( sprintf( /* translators: %s: warning label, e.g. "NSFW". */ __( 'Show hidden content: %s', 'nuxx-spoiler' ), $nuxx_spoiler_label ) ); ?>"
 	>
 		<span class="nuxx-spoiler__pill"><?php echo esc_html( $nuxx_spoiler_label ); ?></span>
 		<span class="nuxx-spoiler__hint"><?php esc_html_e( 'Click to show', 'nuxx-spoiler' ); ?></span>
