@@ -4,7 +4,7 @@ Tags: spoiler, content warning, nsfw, blur, block
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.12.1
+Stable tag: 1.12.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ Yes, via the `--nuxx-spoiler-bar` CSS custom property.
 No. It ships blurred and inert but is present in the HTML and in RSS feeds. It is a courtesy tool, not a security tool.
 
 == Changelog ==
+
+= 1.12.2 =
+* Fix: a revealed linked image (e.g. Medium size linking to the media file) was only clickable in a thin strip near its bottom, and its alt text stayed hidden from screen readers. The image inside the link kept its inert/aria-hidden attributes after reveal; they are now only placed on the outermost element, which reveal lifts.
 
 = 1.12.1 =
 * Accessibility: the reveal controls' accessible names now match their visible text (WCAG 2.5.3 Label in Name, flagged by Lighthouse). The overlay button is named by its visible label and hint, and the inline spoiler by visually hidden text instead of an aria-label.

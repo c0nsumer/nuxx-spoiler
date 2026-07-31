@@ -41,11 +41,19 @@ function initBlockSpoiler( root ) {
 	}
 
 	const contents = isMedia
-		? [ ...host.children ].filter(
-				( el ) =>
-					! el.classList.contains( 'nuxx-spoiler__overlay' ) &&
-					! el.classList.contains( 'nuxx-spoiler__rehide' )
-		  )
+		? [ ...host.children ]
+				.filter(
+					( el ) =>
+						! el.classList.contains( 'nuxx-spoiler__overlay' ) &&
+						! el.classList.contains( 'nuxx-spoiler__rehide' )
+				)
+				// Markup rendered by 1.12.1 and earlier (still possible via
+				// page caches) also set inert on the img inside the link;
+				// include those descendants so reveal lifts it there too.
+				.flatMap( ( el ) => [
+					el,
+					...el.querySelectorAll( '[inert]' ),
+				] )
 		: [ root.querySelector( ':scope > .nuxx-spoiler__content' ) ].filter(
 				Boolean
 		  );

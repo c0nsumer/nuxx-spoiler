@@ -3,7 +3,7 @@
  * Plugin Name:       Spoiler
  * Plugin URI:        https://github.com/c0nsumer/nuxx-spoiler
  * Description:       Hide images, groups of blocks, or inline text behind a blurred, click-to-reveal content warning. Adds a Spoiler block, an image spoiler setting, and an inline spoiler text format to the block editor.
- * Version:           1.12.1
+ * Version:           1.12.2
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Steve Vigneau
@@ -101,14 +101,15 @@ function nuxx_spoiler_filter_image_block( $block_content, $block ) {
 		: __( 'Spoiler', 'nuxx-spoiler' );
 
 	// Hide the media from assistive tech and interaction until revealed;
-	// view.js lifts these on reveal.
+	// view.js lifts these on reveal. Only the outermost element (the link
+	// if present, else the img) may carry them: both attributes cover the
+	// whole subtree, and view.js only lifts them from that element - an
+	// inert img inside the link would stay unclickable after reveal.
 	$media = new WP_HTML_Tag_Processor( $match[0][0] );
 
-	while ( $media->next_tag() ) {
-		if ( in_array( $media->get_tag(), array( 'A', 'IMG' ), true ) ) {
-			$media->set_attribute( 'inert', true );
-			$media->set_attribute( 'aria-hidden', 'true' );
-		}
+	if ( $media->next_tag() ) {
+		$media->set_attribute( 'inert', true );
+		$media->set_attribute( 'aria-hidden', 'true' );
 	}
 
 	// The visible pill + hint text is the accessible name; an aria-label
